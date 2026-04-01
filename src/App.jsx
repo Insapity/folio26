@@ -1,42 +1,72 @@
 import './App.css'
 
-const projects = [
+const strengths = [
   {
-    title: 'Портфолио для креативного специалиста',
+    title: 'Управление командой',
     description:
-      'Одностраничный сайт с выразительным первым экраном, адаптивной сеткой и быстрым доступом к контактам.',
-    stack: 'React, Vite, UI',
+      'Нанимаю, развиваю и синхронизирую дизайнеров так, чтобы команда не просто производила макеты, а стабильно влияла на продукт и бизнес.',
   },
   {
-    title: 'Лендинг под запуск услуги',
+    title: 'Процессы и operating model',
     description:
-      'Структура для презентации услуги: оффер, выгоды, кейсы и понятный сценарий заявки без перегруза.',
-    stack: 'Frontend, Copy, UX',
+      'Выстраиваю роли, ритуалы, приоритеты, систему принятия решений и понятный дизайн-пайплайн без бюрократии ради бюрократии.',
   },
   {
-    title: 'Сайт-визитка с характером',
+    title: 'Сложные продуктовые контуры',
     description:
-      'Минималистичный сайт, который помогает быстро объяснить, кто вы, как работаете и чем можете быть полезны.',
-    stack: 'Responsive, Branding',
+      'Хорошо работаю там, где много стейкхолдеров, технических ограничений, зависимостей между командами и высокая цена ошибок.',
   },
 ]
 
-const facts = [
-  'Делаю сайты, которые выглядят собранно и читаются с первого экрана.',
-  'Люблю чистую вёрстку, ясные тексты и аккуратную адаптацию под мобильные.',
-  'Работаю быстро: от черновика до готовой страницы за несколько итераций.',
+const outcomes = [
+  'Команда становится предсказуемой по качеству, скорости и ответственности.',
+  'Дизайн перестаёт быть сервисной функцией и начинает влиять на продуктовые решения.',
+  'Сложные инициативы движутся через ясные приоритеты, а не через постоянный ручной менеджмент.',
 ]
 
-const services = [
-  'Лендинги и визитки',
-  'Портфолио для фрилансеров и специалистов',
-  'Редизайн первого экрана и структуры сайта',
+const cases = [
+  {
+    label: 'Leadership',
+    title: 'Собрать и стабилизировать дизайн-команду',
+    description:
+      'Когда нужно навести порядок в ролях, ожиданиях, ответственности и качестве работы команды.',
+  },
+  {
+    label: 'Process',
+    title: 'Выстроить процессы без потери скорости',
+    description:
+      'Когда продукт растёт, команд становится больше, а старые договорённости уже не держат систему.',
+  },
+  {
+    label: 'Product',
+    title: 'Удержать сложный продукт управляемым',
+    description:
+      'Когда важно синхронизировать дизайн, продукт и разработку вокруг общей логики и бизнес-целей.',
+  },
 ]
 
-const steps = [
-  'Обсуждаем задачу и собираем короткий каркас сайта.',
-  'Собираю дизайн и адаптивную верстку.',
-  'Публикуем на GitHub Pages или другом хостинге.',
+const principles = [
+  'Сначала договариваюсь о том, что именно команда должна изменить в продукте и организации.',
+  'Потом выстраиваю контур управления: роли, ритмы, ответственность, точки принятия решений.',
+  'После этого усиливаю качество дизайна, кросс-функциональное взаимодействие и predictability delivery.',
+]
+
+const highlights = [
+  {
+    number: '01',
+    title: 'People',
+    text: 'Развитие команды, менторство, найм, рост лидов и удержание качества без микроменеджмента.',
+  },
+  {
+    number: '02',
+    title: 'Process',
+    text: 'Организация дизайн-функции, операционные ритуалы, приоритизация, прозрачность и рабочие правила.',
+  },
+  {
+    number: '03',
+    title: 'Product',
+    text: 'Работа со сложными сценариями, стейкхолдерами и продуктовыми компромиссами на уровне системы.',
+  },
 ]
 
 function App() {
@@ -44,103 +74,119 @@ function App() {
     <main className="page-shell">
       <header className="topbar">
         <a className="brand" href="#hero">
-          IN
+          NL
         </a>
         <nav className="topnav" aria-label="Основная навигация">
           <a href="#about">Обо мне</a>
-          <a href="#projects">Проекты</a>
-          <a href="#contact">Контакты</a>
+          <a href="#strengths">Сильные стороны</a>
+          <a href="#contact">Контакт</a>
         </nav>
       </header>
 
-      <section className="hero">
-        <div className="hero-copy" id="hero">
-          <p className="eyebrow">Portfolio 2026</p>
-          <div className="hero-title-wrap">
-            <span className="hero-orb" aria-hidden="true"></span>
-            <h1>
-              Делаю простые сайты, которые помогают показать себя в интернете
-            </h1>
-          </div>
+      <section className="hero" id="hero">
+        <div className="hero-copy">
+          <p className="eyebrow">Design Lead / Team Management / Product Operations</p>
+          <h1>
+            Дизайн-лид, который помогает командам работать системно, а сложным
+            продуктам расти без хаоса.
+          </h1>
           <p className="lead">
-            Это пример стартового портфолио. Его можно использовать как шаблон:
-            заменить имя, тексты, проекты и сразу опубликовать на GitHub Pages.
+            Я занимаюсь управлением дизайн-командой, выстраиванием процессов и
+            ведением сложных продуктов. Подключаюсь там, где нужен не просто
+            сильный individual contributor, а человек, который собирает вокруг
+            себя работающую дизайн-функцию и делает её полезной для бизнеса.
           </p>
           <div className="hero-actions">
-            <a className="primary-link" href="#projects">
-              Посмотреть проекты
+            <a className="primary-link" href="#contact">
+              Обсудить задачу
             </a>
-            <a className="secondary-link" href="#contact">
-              Написать мне
+            <a className="secondary-link" href="#about">
+              Посмотреть профиль
             </a>
           </div>
         </div>
 
         <aside className="hero-card">
-          <p className="card-label">Сейчас на сайте</p>
+          <p className="card-label">Что получает компания</p>
           <ul className="stack-list">
-            <li>Крупный первый экран с понятным оффером</li>
-            <li>Блоки услуг, кейсов и процесса работы</li>
-            <li>Готовая структура для личного портфолио</li>
+            <li>Управляемую команду с ясной зоной ответственности</li>
+            <li>Понятные процессы, которые поддерживают скорость, а не душат её</li>
+            <li>Лидера, который умеет держать продукт, людей и delivery в одной системе</li>
           </ul>
-          <div className="status-row">
-            <span className="status-dot" aria-hidden="true"></span>
-            Сборка подходит для GitHub Pages
+          <div className="hero-meta">
+            <span>Фокус</span>
+            <strong>People / Process / Product</strong>
           </div>
         </aside>
       </section>
 
       <section className="section-grid about-grid" id="about">
-        <div className="panel panel-accent">
+        <div className="panel panel-feature">
           <p className="section-kicker">Обо мне</p>
-          <h2>Привет, я Николай. Собираю аккуратные сайты-портфолио и лендинги.</h2>
+          <h2>
+            Я соединяю дизайн-лидерство, продуктовый контекст и операционную
+            дисциплину.
+          </h2>
           <p>
-            Мне нравится делать страницы, которые выглядят спокойно, но не
-            скучно: с хорошей типографикой, понятной структурой и ясным
-            призывом к действию.
+            Моя ценность не только в том, чтобы видеть хороший интерфейс. Я
+            умею собирать среду, в которой команда принимает сильные решения,
+            двигается в общем ритме и выдерживает сложность продукта на длинной
+            дистанции.
+          </p>
+          <p>
+            Мне интересны задачи, где нужно выстроить работающую систему:
+            наладить взаимодействие между дизайном, продуктом и разработкой,
+            снизить организационный шум, усилить ownership и превратить дизайн в
+            реальный инструмент роста, а не в декоративную функцию.
           </p>
         </div>
 
-        <div className="panel">
-          <p className="section-kicker">Фокус</p>
-          <ul className="principles-list">
-            {facts.map((item) => (
-              <li key={item}>{item}</li>
+        <div className="panel panel-compact">
+          <p className="section-kicker">Ключевой фокус</p>
+          <div className="metrics-grid">
+            {highlights.map((item) => (
+              <div key={item.number}>
+                <span className="metric-number">{item.number}</span>
+                <strong>{item.title}</strong>
+                <span>{item.text}</span>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
-      <section className="section-grid services-section">
+      <section className="section-grid" id="strengths">
         <div className="section-heading">
-          <p className="section-kicker">Что я делаю</p>
-          <h2 className="section-title-right">
-            Сайты, которые легко запустить и удобно развивать
+          <p className="section-kicker">Сильные стороны</p>
+          <h2>
+            Беру на себя не только визуальное качество, но и зрелость всей
+            дизайн-системы принятия решений.
           </h2>
         </div>
-        <div className="service-grid">
-          {services.map((service, index) => (
-            <article className="service-card" key={service}>
-              <span className="service-index">0{index + 1}</span>
-              <h3>{service}</h3>
+        <div className="strength-grid">
+          {strengths.map((item) => (
+            <article className="feature-card" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="section-grid" id="projects">
+      <section className="section-grid">
         <div className="section-heading">
-          <p className="section-kicker">Проекты</p>
-          <h2 className="section-title-right">
-            Примеры того, как может выглядеть твой следующий сайт
+          <p className="section-kicker">Где я полезен</p>
+          <h2>
+            Обычно меня привлекают в моменты роста, усложнения или
+            организационного напряжения.
           </h2>
         </div>
         <div className="project-grid">
-          {projects.map((project) => (
-            <article className="project-card" key={project.title}>
-              <p className="project-stack">{project.stack}</p>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
+          {cases.map((item) => (
+            <article className="project-card" key={item.title}>
+              <p className="project-stack">{item.label}</p>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
             </article>
           ))}
         </div>
@@ -150,38 +196,29 @@ function App() {
         <div className="panel">
           <p className="section-kicker">Как я работаю</p>
           <ul className="principles-list">
-            {steps.map((item) => (
+            {principles.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
         </div>
 
-        <div className="panel metrics-panel">
-          <p className="section-kicker">Почему такой сайт удобен</p>
-          <div className="metrics-grid">
-            <div>
-              <strong>1 страница</strong>
-              <span>достаточно, чтобы представить себя и собрать заявки</span>
-            </div>
-            <div>
-              <strong>3-4 блока</strong>
-              <span>хватает для понятного сценария просмотра</span>
-            </div>
-            <div>
-              <strong>1 репозиторий</strong>
-              <span>и сайт уже можно бесплатно держать на GitHub Pages</span>
-            </div>
-          </div>
+        <div className="panel panel-outcomes">
+          <p className="section-kicker">Результат для бизнеса</p>
+          <ul className="principles-list">
+            {outcomes.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
         </div>
       </section>
 
       <section className="contact-banner" id="contact">
         <div>
           <p className="section-kicker">Контакт</p>
-          <h2>hello@portfolio.dev</h2>
+          <h2>Готов обсудить команду, продукт или дизайн-операционку.</h2>
           <p>Telegram: @insapity</p>
         </div>
-        <a className="primary-link" href="mailto:hello@portfolio.dev">
+        <a className="primary-link" href="https://t.me/insapity" target="_blank" rel="noreferrer">
           Написать
         </a>
       </section>

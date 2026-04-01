@@ -56,7 +56,12 @@ function App() {
       <section className="hero">
         <div className="hero-copy" id="hero">
           <p className="eyebrow">Portfolio 2026</p>
-          <h1>Делаю простые сайты, которые помогают показать себя в интернете</h1>
+          <div className="hero-title-wrap">
+            <span className="hero-orb" aria-hidden="true"></span>
+            <h1>
+              Делаю простые сайты, которые помогают показать себя в интернете
+            </h1>
+          </div>
           <p className="lead">
             Это пример стартового портфолио. Его можно использовать как шаблон:
             заменить имя, тексты, проекты и сразу опубликовать на GitHub Pages.
@@ -109,7 +114,9 @@ function App() {
       <section className="section-grid services-section">
         <div className="section-heading">
           <p className="section-kicker">Что я делаю</p>
-          <h2>Сайты, которые легко запустить и удобно развивать</h2>
+          <h2 className="section-title-right">
+            Сайты, которые легко запустить и удобно развивать
+          </h2>
         </div>
         <div className="service-grid">
           {services.map((service, index) => (
@@ -124,7 +131,9 @@ function App() {
       <section className="section-grid" id="projects">
         <div className="section-heading">
           <p className="section-kicker">Проекты</p>
-          <h2>Примеры того, как может выглядеть твой следующий сайт</h2>
+          <h2 className="section-title-right">
+            Примеры того, как может выглядеть твой следующий сайт
+          </h2>
         </div>
         <div className="project-grid">
           {projects.map((project) => (

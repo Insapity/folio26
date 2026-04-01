@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;700;800&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;700;800&display=swap');
+
+@font-face {
+  font-family: 'Soyuz Grotesk';
+  src: url('/folio26/fonts/SoyuzGrotesk-Bold.otf') format('opentype');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
 
 :root {
   font-family: 'Manrope', sans-serif;

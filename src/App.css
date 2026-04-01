@@ -96,7 +96,7 @@
   position: relative;
   z-index: 1;
   max-width: 7ch;
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Soyuz Grotesk', 'Arial Black', sans-serif;
   font-size: clamp(4rem, 7.2vw, 5.7rem);
   line-height: 0.93;
   letter-spacing: -0.04em;
@@ -125,8 +125,8 @@
 
 .hero-orb {
   position: absolute;
-  top: 12px;
-  left: 126px;
+  top: 18px;
+  left: 154px;
   width: clamp(160px, 18vw, 228px);
   height: clamp(160px, 18vw, 228px);
   border-radius: 50%;
@@ -390,8 +390,8 @@
   }
 
   .hero-orb {
-    left: 34%;
-    top: 20px;
+    left: 40%;
+    top: 26px;
   }
 
   .section-heading {
@@ -433,7 +433,7 @@
 
   .hero-orb {
     top: 24px;
-    left: 32%;
+    left: 38%;
     width: 132px;
     height: 132px;
   }

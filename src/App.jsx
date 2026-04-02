@@ -1,227 +1,170 @@
 import './App.css'
 
-const strengths = [
-  {
-    title: 'Управление командой',
-    description:
-      'Нанимаю, развиваю и синхронизирую дизайнеров так, чтобы команда не просто производила макеты, а стабильно влияла на продукт и бизнес.',
-  },
-  {
-    title: 'Процессы и operating model',
-    description:
-      'Выстраиваю роли, ритуалы, приоритеты, систему принятия решений и понятный дизайн-пайплайн без бюрократии ради бюрократии.',
-  },
-  {
-    title: 'Сложные продуктовые контуры',
-    description:
-      'Хорошо работаю там, где много стейкхолдеров, технических ограничений, зависимостей между командами и высокая цена ошибок.',
-  },
-]
+const portraitLeft = `${import.meta.env.BASE_URL}images/portrait-left.png`
+const portraitCenter = `${import.meta.env.BASE_URL}images/portrait-center.png`
+const portraitRight = `${import.meta.env.BASE_URL}images/portrait-right.png`
+const caseImage = `${import.meta.env.BASE_URL}images/folio-case.png`
+const routeA = `${import.meta.env.BASE_URL}images/route-a.svg`
+const routeB = `${import.meta.env.BASE_URL}images/route-b.svg`
 
-const outcomes = [
-  'Команда становится предсказуемой по качеству, скорости и ответственности.',
-  'Дизайн перестаёт быть сервисной функцией и начинает влиять на продуктовые решения.',
-  'Сложные инициативы движутся через ясные приоритеты, а не через постоянный ручной менеджмент.',
-]
-
-const cases = [
+const caseCards = [
   {
-    label: 'Leadership',
-    title: 'Собрать и стабилизировать дизайн-команду',
-    description:
-      'Когда нужно навести порядок в ролях, ожиданиях, ответственности и качестве работы команды.',
+    number: '( 01 )',
+    className: 'case-card case-card-first',
+    intro:
+      'Считаю своим главным показательным кейсом свою команду дизов. Почему я так решил и какие пруфы',
+    accent: '— читай внутри, там про ИПР, процессы, мотивацию и всё-всё',
+    imageCaption: 'мое ОПГ - особая продуктовая группировка',
   },
   {
-    label: 'Process',
-    title: 'Выстроить процессы без потери скорости',
-    description:
-      'Когда продукт растёт, команд становится больше, а старые договорённости уже не держат систему.',
+    number: '( 02 )',
+    className: 'case-card case-card-second',
+    intro:
+      'В Т-Бизнесе я отвечаю за Главную и ключевые разделы. Второй кейс будет про Главную 4.0 — самый масштабный проект редизайна в рамках всей нашей компании',
+    accent:
+      'Внутри про идеально выстроенный процесс, продуктовое дискавери мечты, процесс всего лишь в 2 лица с продактом, метрики, достижения и выхлоп',
+    imageCaption: '',
   },
   {
-    label: 'Product',
-    title: 'Удержать сложный продукт управляемым',
-    description:
-      'Когда важно синхронизировать дизайн, продукт и разработку вокруг общей логики и бизнес-целей.',
-  },
-]
-
-const principles = [
-  'Сначала договариваюсь о том, что именно команда должна изменить в продукте и организации.',
-  'Потом выстраиваю контур управления: роли, ритмы, ответственность, точки принятия решений.',
-  'После этого усиливаю качество дизайна, кросс-функциональное взаимодействие и predictability delivery.',
-]
-
-const highlights = [
-  {
-    number: '01',
-    title: 'People',
-    text: 'Развитие команды, менторство, найм, рост лидов и удержание качества без микроменеджмента.',
-  },
-  {
-    number: '02',
-    title: 'Process',
-    text: 'Организация дизайн-функции, операционные ритуалы, приоритизация, прозрачность и рабочие правила.',
-  },
-  {
-    number: '03',
-    title: 'Product',
-    text: 'Работа со сложными сценариями, стейкхолдерами и продуктовыми компромиссами на уровне системы.',
+    number: '( 03 )',
+    className: 'case-card case-card-third',
+    intro:
+      'На десерт оставил продуктовые достижения. Тут будет про инициативность, генерацию идей, много денег для компании и в целом мой вклад помимо Главного экрана',
+    accent: 'А вклад прям солидный, но не могу его светануть из-за NDA, увы',
+    imageCaption: '',
   },
 ]
 
 function App() {
   return (
-    <main className="page-shell">
-      <header className="topbar">
-        <a className="brand" href="#hero">
-          NL
-        </a>
-        <nav className="topnav" aria-label="Основная навигация">
-          <a href="#about">Обо мне</a>
-          <a href="#strengths">Сильные стороны</a>
-          <a href="#contact">Контакт</a>
+    <main className="figma-page">
+      <div className="portfolio-canvas">
+        <h1 className="hero-title">асцендент в дизайне</h1>
+        <p className="hero-subtitle">Коля Лукьянюк • Лид-дизайнер и артдир</p>
+
+        <nav className="side-nav" aria-label="Основная навигация">
+          <a href="#about">про себя</a>
+          <a href="#cases">кейсы</a>
+          <a href="#origin">мой оридж</a>
+          <a href="#contact">связь</a>
         </nav>
-      </header>
 
-      <section className="hero" id="hero">
-        <div className="hero-copy">
-          <p className="eyebrow">Design Lead / Team Management / Product Operations</p>
-          <h1>
-            Дизайн-лид, который помогает командам работать системно, а сложным
-            продуктам расти без хаоса.
-          </h1>
-          <p className="lead">
-            Я занимаюсь управлением дизайн-командой, выстраиванием процессов и
-            ведением сложных продуктов. Подключаюсь там, где нужен не просто
-            сильный individual contributor, а человек, который собирает вокруг
-            себя работающую дизайн-функцию и делает её полезной для бизнеса.
-          </p>
-          <div className="hero-actions">
-            <a className="primary-link" href="#contact">
-              Обсудить задачу
-            </a>
-            <a className="secondary-link" href="#about">
-              Посмотреть профиль
-            </a>
-          </div>
+        <div className="portrait portrait-left">
+          <img src={portraitLeft} alt="" />
+        </div>
+        <div className="portrait portrait-center">
+          <img src={portraitCenter} alt="Портрет Коли Лукьянюка" />
+        </div>
+        <div className="portrait portrait-right">
+          <img src={portraitRight} alt="" />
         </div>
 
-        <aside className="hero-card">
-          <p className="card-label">Что получает компания</p>
-          <ul className="stack-list">
-            <li>Управляемую команду с ясной зоной ответственности</li>
-            <li>Понятные процессы, которые поддерживают скорость, а не душат её</li>
-            <li>Лидера, который умеет держать продукт, людей и delivery в одной системе</li>
-          </ul>
-          <div className="hero-meta">
-            <span>Фокус</span>
-            <strong>People / Process / Product</strong>
+        <section className="intro-copy" id="about">
+          <p className="intro-line intro-line-1">
+            <span className="panama-inline">Само собой</span>
+            <span className="tt-inline"> я дизайнер :::::</span>
+          </p>
+          <p className="intro-line intro-line-2">
+            Отвечаю за дизайн сложных продуктов с большой ценой ошибки — б2б
+            финтех, екомы, ритейл, медиа. Имею солидную экспертность продакта,
+            чем отличаюсь от коллег.
+          </p>
+          <p className="intro-line intro-line-3">
+            Развиваю команду дизайнеров, отвечаю за качество их работы, помогаю
+            им создавать продукт волнующий душу и метрики. И находить мотивацию
+            становиться лучше
+          </p>
+          <div className="tiny-note note-motivation">
+            <span>вставать по утрам</span>
+            <span>на 121 со мной</span>
           </div>
-        </aside>
-      </section>
-
-      <section className="section-grid about-grid" id="about">
-        <div className="panel panel-feature">
-          <p className="section-kicker">Обо мне</p>
-          <h2>
-            Я соединяю дизайн-лидерство, продуктовый контекст и операционную
-            дисциплину.
-          </h2>
-          <p>
-            Моя ценность не только в том, чтобы видеть хороший интерфейс. Я
-            умею собирать среду, в которой команда принимает сильные решения,
-            двигается в общем ритме и выдерживает сложность продукта на длинной
-            дистанции.
+          <p className="tiny-note note-side">да ты че базара нет</p>
+          <p className="intro-line intro-line-4">
+            ну и процессы для работы выстраиваю с нуля — работают, приносят
+            явную пользу отделу
           </p>
-          <p>
-            Мне интересны задачи, где нужно выстроить работающую систему:
-            наладить взаимодействие между дизайном, продуктом и разработкой,
-            снизить организационный шум, усилить ownership и превратить дизайн в
-            реальный инструмент роста, а не в декоративную функцию.
-          </p>
-        </div>
+        </section>
 
-        <div className="panel panel-compact">
-          <p className="section-kicker">Ключевой фокус</p>
-          <div className="metrics-grid">
-            {highlights.map((item) => (
-              <div key={item.number}>
-                <span className="metric-number">{item.number}</span>
-                <strong>{item.title}</strong>
-                <span>{item.text}</span>
+        <section className="origin-section" id="origin">
+          <p className="section-panama section-panama-top">
+            на момент вайбкодинга этого резюме я
+          </p>
+
+          <div className="origin-card origin-card-left">
+            <p className="origin-label origin-label-left">иду из точки А</p>
+            <div className="origin-text">
+              <p>
+                Почти 4 года работаю в Т-Бизнесе. Сейчас на должности арт-дира
+                — у нас это лид, который помимо аллоцированного продукта имеет
+                свою дизайн команду и отвечает за качество ее работы
+              </p>
+            </div>
+            <img className="origin-route route-left" src={routeA} alt="" />
+            <div className="origin-tags">
+              <span>интерфейс б2б</span>
+              <span>(ex Тинькофф)</span>
+            </div>
+          </div>
+
+          <div className="origin-card origin-card-right">
+            <p className="origin-label origin-label-right">в точку Б</p>
+            <div className="origin-text">
+              <p>
+                От новой потенциальной работы хочу получить больше свободы,
+                шанс проверить свои силы вне закостенелого легаси, и новой
+                качественной ответственности — сложные вызовы, надежную команду
+              </p>
+            </div>
+            <img className="origin-route route-right" src={routeB} alt="" />
+          </div>
+
+          <p className="expectation-note">
+            если мы с вами общаемся, вероятно вы соответствуете этим ожиданиям
+          </p>
+        </section>
+
+        <section className="cases-section" id="cases">
+          <p className="section-panama cases-heading">
+            а теперь про мой опыт, компетенции и кейсы
+          </p>
+
+          {caseCards.map((card) => (
+            <article className={card.className} key={card.number}>
+              <p className="case-number">{card.number}</p>
+              <div className="case-surface">
+                <p className="case-arrow">→</p>
+                <p className="case-intro">
+                  {card.intro.includes('Главную 4.0') ? (
+                    <>
+                      В Т-Бизнесе я отвечаю за Главную и ключевые разделы.
+                      Второй кейс будет про{' '}
+                      <span className="panama-inline">
+                        Главную 4.0 — самый масштабный проект
+                      </span>{' '}
+                      редизайна в рамках всей нашей компании
+                    </>
+                  ) : (
+                    card.intro
+                  )}
+                </p>
+                <p className="case-accent">{card.accent}</p>
+                <div className="case-image-wrap">
+                  <img src={caseImage} alt="" />
+                  {card.imageCaption ? (
+                    <p className="case-image-caption">{card.imageCaption}</p>
+                  ) : null}
+                </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-grid" id="strengths">
-        <div className="section-heading">
-          <p className="section-kicker">Сильные стороны</p>
-          <h2>
-            Беру на себя не только визуальное качество, но и зрелость всей
-            дизайн-системы принятия решений.
-          </h2>
-        </div>
-        <div className="strength-grid">
-          {strengths.map((item) => (
-            <article className="feature-card" key={item.title}>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
             </article>
           ))}
-        </div>
-      </section>
+        </section>
 
-      <section className="section-grid">
-        <div className="section-heading">
-          <p className="section-kicker">Где я полезен</p>
-          <h2>
-            Обычно меня привлекают в моменты роста, усложнения или
-            организационного напряжения.
-          </h2>
-        </div>
-        <div className="project-grid">
-          {cases.map((item) => (
-            <article className="project-card" key={item.title}>
-              <p className="project-stack">{item.label}</p>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section-grid split-panel">
-        <div className="panel">
-          <p className="section-kicker">Как я работаю</p>
-          <ul className="principles-list">
-            {principles.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="panel panel-outcomes">
-          <p className="section-kicker">Результат для бизнеса</p>
-          <ul className="principles-list">
-            {outcomes.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section className="contact-banner" id="contact">
-        <div>
-          <p className="section-kicker">Контакт</p>
-          <h2>Готов обсудить команду, продукт или дизайн-операционку.</h2>
-          <p>Telegram: @insapity</p>
-        </div>
-        <a className="primary-link" href="https://t.me/insapity" target="_blank" rel="noreferrer">
-          Написать
-        </a>
-      </section>
+        <footer className="page-footer" id="contact">
+          <a href="https://t.me/insapity" target="_blank" rel="noreferrer">
+            связь
+          </a>
+        </footer>
+      </div>
     </main>
   )
 }

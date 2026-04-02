@@ -1,28 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;700&display=swap');
+
+@font-face {
+  font-family: 'Panama';
+  src: url('/folio26/fonts/Panama-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Panama';
+  src: url('/folio26/fonts/Panama-Italic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Panama';
+  src: url('/folio26/fonts/Panama-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Panama';
+  src: url('/folio26/fonts/Panama-Iranic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
 
 :root {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'TT Norms Pro', 'Manrope', sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: #f1f1f1;
-  background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 24%),
-    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.05), transparent 28%),
-    linear-gradient(180deg, #060606 0%, #0b0b0b 100%);
+  color: #1e1e1e;
+  background: #e7e7e7;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  --panel: rgba(10, 10, 10, 0.86);
-  --border: rgba(255, 255, 255, 0.12);
-  --border-strong: rgba(255, 255, 255, 0.22);
-  --line: rgba(255, 255, 255, 0.1);
-  --heading: #fafafa;
-  --body: #c7c7c7;
-  --body-strong: #e6e6e6;
-  --muted: #8d8d8d;
-  --shadow: 0 22px 46px rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -35,20 +54,9 @@ html {
 
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: 1512px;
   min-height: 100vh;
-}
-
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-  background-size: 52px 52px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.22), transparent 80%);
+  background: #e7e7e7;
 }
 
 a {

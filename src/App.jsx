@@ -11,6 +11,7 @@ const caseCards = [
   {
     number: '( 01 )',
     className: 'case-card case-card-first',
+    href: `${import.meta.env.BASE_URL}cases/01/`,
     intro:
       'Считаю своим главным показательным кейсом свою команду дизов. Почему я так решил и какие пруфы',
     accent: '— читай внутри, там про ИПР, процессы, мотивацию и всё-всё',
@@ -19,6 +20,7 @@ const caseCards = [
   {
     number: '( 02 )',
     className: 'case-card case-card-second',
+    href: `${import.meta.env.BASE_URL}cases/02/`,
     intro:
       'В Т-Бизнесе я отвечаю за Главную и ключевые разделы. Второй кейс будет про Главную 4.0 — самый масштабный проект редизайна в рамках всей нашей компании',
     accent:
@@ -28,6 +30,7 @@ const caseCards = [
   {
     number: '( 03 )',
     className: 'case-card case-card-third',
+    href: `${import.meta.env.BASE_URL}cases/03/`,
     intro:
       'На десерт оставил продуктовые достижения. Тут будет про инициативность, генерацию идей, много денег для компании и в целом мой вклад помимо Главного экрана',
     accent: 'А вклад прям солидный, но не могу его светануть из-за NDA, увы',
@@ -132,6 +135,11 @@ function App() {
             <article className={card.className} key={card.number}>
               <p className="case-number">{card.number}</p>
               <div className="case-surface">
+                <a
+                  className="case-link"
+                  href={card.href}
+                  aria-label={`Открыть кейс ${card.number}`}
+                ></a>
                 <p className="case-arrow">→</p>
                 <p className="case-intro">
                   {card.intro.includes('Главную 4.0') ? (

@@ -343,6 +343,13 @@
   background: #ffffff;
 }
 
+.case-link {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  border-radius: 72px;
+}
+
 .case-arrow {
   position: absolute;
   top: 80px;
@@ -358,6 +365,7 @@
   top: 80px;
   left: 32px;
   width: 858px;
+  z-index: 1;
   margin: 0;
   color: #1e1e1e;
   font-size: 32px;
@@ -373,6 +381,7 @@
   position: absolute;
   left: 469px;
   width: 469px;
+  z-index: 1;
   margin: 0;
   color: #1e1e1e;
   font-size: 32px;
@@ -404,6 +413,7 @@
   height: 436px;
   overflow: hidden;
   border-radius: 72px;
+  z-index: 1;
 }
 
 .case-image-wrap img {
@@ -418,6 +428,7 @@
   top: 164px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
   margin: 0;
   color: #ffffff;
   font-size: 32px;

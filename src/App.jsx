@@ -133,13 +133,13 @@ function App() {
 
           {caseCards.map((card) => (
             <article className={card.className} key={card.number}>
+              <a
+                className="case-link-full"
+                href={card.href}
+                aria-label={`Открыть кейс ${card.number}`}
+              ></a>
               <p className="case-number">{card.number}</p>
               <div className="case-surface">
-                <a
-                  className="case-link"
-                  href={card.href}
-                  aria-label={`Открыть кейс ${card.number}`}
-                ></a>
                 <p className="case-arrow">→</p>
                 <p className="case-intro">
                   {card.intro.includes('Главную 4.0') ? (

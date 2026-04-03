@@ -113,6 +113,7 @@
   transform: translateX(-50%);
   width: 340px;
   height: 340px;
+  z-index: 2;
 }
 
 .image-block,

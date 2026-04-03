@@ -42,7 +42,7 @@
 
 .hero-subtitle {
   position: absolute;
-  top: 9.0625rem;
+  top: 7.85rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
@@ -122,7 +122,7 @@
 }
 
 .intro-block {
-  top: 39.5rem;
+  top: 41rem;
   left: 2.25rem;
   width: 90.5rem;
   height: 23.5rem;

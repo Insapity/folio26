@@ -6,8 +6,8 @@
 
 .portfolio-canvas {
   position: relative;
-  width: 1512px;
-  min-height: 7296px;
+  width: 94.5rem;
+  min-height: 456rem;
   margin: 0 auto;
 }
 
@@ -29,26 +29,26 @@
 
 .hero-title {
   position: absolute;
-  top: 28px;
+  top: 1.75rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
   margin: 0;
   color: #1e1e1e;
-  font-size: 88px;
+  font-size: 5.5rem;
   line-height: 1;
   white-space: nowrap;
 }
 
 .hero-subtitle {
   position: absolute;
-  top: 145px;
+  top: 9.0625rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
   margin: 0;
   color: #1e1e1e;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 1;
   letter-spacing: -0.01em;
   white-space: nowrap;
@@ -56,14 +56,14 @@
 
 .side-nav {
   position: absolute;
-  top: 225px;
-  right: 92px;
+  top: 14.0625rem;
+  right: 5.75rem;
   z-index: 4;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 16px;
-  font-size: 16px;
+  gap: 1rem;
+  font-size: 1rem;
   line-height: 1;
 }
 
@@ -91,28 +91,28 @@
 
 .portrait-left,
 .portrait-right {
-  top: 252px;
-  width: 286px;
-  height: 286px;
+  top: 15.75rem;
+  width: 17.875rem;
+  height: 17.875rem;
   opacity: 0.5;
 }
 
 .portrait-left {
   left: 50%;
-  transform: translateX(calc(-50% - 244px));
+  transform: translateX(calc(-50% - 15.25rem));
 }
 
 .portrait-right {
   left: 50%;
-  transform: translateX(calc(-50% + 244px));
+  transform: translateX(calc(-50% + 15.25rem));
 }
 
 .portrait-center {
-  top: 225px;
+  top: 14.0625rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 340px;
-  height: 340px;
+  width: 21.25rem;
+  height: 21.25rem;
   z-index: 2;
 }
 
@@ -122,25 +122,25 @@
 }
 
 .intro-block {
-  top: 725px;
-  left: 36px;
-  width: 1448px;
-  height: 376px;
+  top: 45.3125rem;
+  left: 2.25rem;
+  width: 90.5rem;
+  height: 23.5rem;
 }
 
 .origin-section {
   position: absolute;
-  top: 1261px;
-  left: 32px;
-  width: 1448px;
+  top: 78.8125rem;
+  left: 2rem;
+  width: 90.5rem;
 }
 
 .section-panama {
   position: absolute;
   margin: 0;
   color: #1e1e1e;
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 
 .section-panama-top {
@@ -152,19 +152,19 @@
 
 .expectation-note {
   position: absolute;
-  top: 432px;
-  left: 786px;
-  width: 672px;
+  top: 27rem;
+  left: 49.125rem;
+  width: 42rem;
   margin: 0;
   color: rgba(30, 30, 30, 0.2);
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 
 .origin-block {
-  top: 72px;
-  width: 720px;
-  height: 344px;
+  top: 4.5rem;
+  width: 45rem;
+  height: 21.5rem;
 }
 
 .origin-block-left {
@@ -177,9 +177,9 @@
 
 .cases-section {
   position: absolute;
-  top: 1893px;
-  left: 195px;
-  width: 1123px;
+  top: 118.3125rem;
+  left: 12.1875rem;
+  width: 70.1875rem;
 }
 
 .cases-heading {
@@ -196,28 +196,28 @@
 }
 
 .case-image-card-first {
-  top: 80px;
+  top: 5rem;
   left: 0;
-  width: 1123px;
-  height: 692px;
+  width: 70.1875rem;
+  height: 43.25rem;
 }
 
 .case-image-card-second {
-  top: 780px;
+  top: 48.75rem;
   left: 0;
-  width: 1123px;
-  height: 852px;
+  width: 70.1875rem;
+  height: 53.25rem;
 }
 
 .case-image-card-third {
-  top: 1640px;
+  top: 102.5rem;
   left: 0;
-  width: 1123px;
-  height: 732px;
+  width: 70.1875rem;
+  height: 45.75rem;
 }
 
 .page-footer {
   position: absolute;
-  right: 92px;
-  top: 4540px;
+  right: 5.75rem;
+  top: 283.75rem;
 }

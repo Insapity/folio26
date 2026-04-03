@@ -98,16 +98,19 @@
 }
 
 .portrait-left {
-  left: 486px;
+  left: 50%;
+  transform: translateX(calc(-50% - 332px));
 }
 
 .portrait-right {
-  left: 954px;
+  left: 50%;
+  transform: translateX(calc(-50% + 332px));
 }
 
 .portrait-center {
   top: 225px;
-  left: 586px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 340px;
   height: 340px;
 }

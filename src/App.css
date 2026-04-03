@@ -7,29 +7,21 @@
 .portfolio-canvas {
   position: relative;
   width: 1512px;
-  min-height: 4305px;
+  min-height: 7296px;
   margin: 0 auto;
 }
 
 .hero-title,
 .section-panama,
 .side-nav,
-.origin-label,
 .expectation-note,
-.case-number,
-.case-image-caption,
-.page-footer a,
-.panama-inline {
+.page-footer a {
   font-family: 'Panama', 'Instrument Serif', serif;
   font-style: italic;
   font-weight: 400;
 }
 
-.hero-subtitle,
-.intro-line,
-.origin-text,
-.case-intro,
-.case-accent {
+.hero-subtitle {
   font-family: 'TT Norms Pro', 'Manrope', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -37,7 +29,7 @@
 
 .hero-title {
   position: absolute;
-  top: 63px;
+  top: 128px;
   left: 376px;
   margin: 0;
   color: #1e1e1e;
@@ -47,7 +39,7 @@
 
 .hero-subtitle {
   position: absolute;
-  top: 177px;
+  top: 242px;
   left: 529px;
   margin: 0;
   color: #1e1e1e;
@@ -80,10 +72,13 @@
   border-radius: 50%;
 }
 
-.portrait img {
+.portrait img,
+.image-block img,
+.case-image-card img {
+  display: block;
   width: 100%;
   height: 100%;
-  display: block;
+  object-fit: cover;
 }
 
 .portrait-left,
@@ -109,74 +104,16 @@
   height: 340px;
 }
 
-.intro-copy {
+.image-block,
+.case-image-card {
   position: absolute;
+}
+
+.intro-block {
   top: 725px;
-  left: 32px;
+  left: 36px;
   width: 1448px;
-  color: #1e1e1e;
-}
-
-.intro-line {
-  position: absolute;
-  margin: 0;
-  font-size: 32px;
-  line-height: 40px;
-  letter-spacing: -0.01em;
-}
-
-.intro-line-1 {
-  top: 0;
-  left: 0;
-}
-
-.tt-inline {
-  font-family: 'TT Norms Pro', 'Manrope', sans-serif;
-  font-style: normal;
-}
-
-.intro-line-2 {
-  top: 0;
-  left: 169px;
-  width: 1177px;
-}
-
-.intro-line-3 {
-  top: 128px;
-  left: 0;
-  width: 1373px;
-}
-
-.tiny-note {
-  position: absolute;
-  margin: 0;
-  color: #1e1e1e;
-  font-size: 12px;
-  line-height: 12px;
-}
-
-.note-motivation {
-  top: 198px;
-  left: 900px;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.note-motivation span {
-  text-decoration: line-through;
-}
-
-.note-side {
-  top: 40px;
-  left: 550px;
-  width: 82px;
-}
-
-.intro-line-4 {
-  top: 216px;
-  left: 808px;
-  width: 672px;
+  height: 376px;
 }
 
 .origin-section {
@@ -199,89 +136,9 @@
   left: 484px;
 }
 
-.origin-card {
-  position: absolute;
-  top: 64px;
-  width: 720px;
-  height: 344px;
-  border-radius: 72px;
-  background: #ffffff;
-}
-
-.origin-card-left {
-  left: 0;
-}
-
-.origin-card-right {
-  right: 0;
-}
-
-.origin-label {
-  position: absolute;
-  top: 44px;
-  margin: 0;
-  color: rgba(30, 30, 30, 0.2);
-  font-size: 32px;
-  line-height: 40px;
-}
-
-.origin-label-left {
-  left: 48px;
-}
-
-.origin-label-right {
-  left: 404px;
-}
-
-.origin-text {
-  position: absolute;
-  top: 120px;
-  left: 32px;
-  width: 648px;
-  color: #1e1e1e;
-  font-size: 32px;
-  line-height: 40px;
-  letter-spacing: -0.01em;
-}
-
-.origin-text p {
-  margin: 0;
-}
-
-.origin-route {
-  position: absolute;
-  pointer-events: none;
-}
-
-.route-left {
-  left: 32px;
-  bottom: 6px;
-  width: 395px;
-}
-
-.route-right {
-  right: 79px;
-  bottom: 10px;
-  width: 447px;
-}
-
-.origin-tags {
-  position: absolute;
-  top: 152px;
-  left: 556px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  color: #1e1e1e;
-  font-family: 'Panama', 'Instrument Serif', serif;
-  font-size: 12px;
-  font-style: italic;
-  line-height: 12px;
-}
-
 .expectation-note {
   position: absolute;
-  top: 496px;
+  top: 432px;
   left: 786px;
   width: 672px;
   margin: 0;
@@ -290,161 +147,61 @@
   line-height: 40px;
 }
 
+.origin-block {
+  top: 72px;
+  width: 720px;
+  height: 344px;
+}
+
+.origin-block-left {
+  left: 0;
+}
+
+.origin-block-right {
+  right: 0;
+}
+
 .cases-section {
   position: absolute;
-  top: 1933px;
-  left: 32px;
-  width: 1448px;
+  top: 1893px;
+  left: 195px;
+  width: 1123px;
 }
 
 .cases-heading {
   top: 0;
-  left: 403px;
+  left: 208px;
 }
 
-.case-card {
-  position: absolute;
-  left: 140px;
-  width: 1060px;
+.case-image-card a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
-.case-card-first {
-  top: 80px;
+.case-image-card-first {
+  top: 120px;
+  left: 0;
+  width: 1123px;
   height: 692px;
 }
 
-.case-card-second {
-  top: 780px;
+.case-image-card-second {
+  top: 820px;
+  left: 0;
+  width: 1123px;
   height: 852px;
 }
 
-.case-card-third {
-  top: 1640px;
-  height: 732px;
-}
-
-.case-number {
-  position: absolute;
-  top: 0;
+.case-image-card-third {
+  top: 1680px;
   left: 0;
-  z-index: 1;
-  margin: 0;
-  color: rgba(30, 30, 30, 0.2);
-  font-size: 32px;
-  line-height: 40px;
-}
-
-.case-link-full {
-  position: absolute;
-  inset: 0;
-  z-index: 6;
-  display: block;
-}
-
-.case-surface {
-  position: absolute;
-  top: 0;
-  left: 109px;
-  width: 966px;
-  height: 100%;
-  border-radius: 72px;
-  background: #ffffff;
-  z-index: 1;
-}
-
-.case-arrow {
-  position: absolute;
-  top: 80px;
-  right: 91px;
-  margin: 0;
-  color: rgba(30, 30, 30, 0.2);
-  font-size: 32px;
-  line-height: 40px;
-}
-
-.case-intro {
-  position: absolute;
-  top: 80px;
-  left: 32px;
-  width: 858px;
-  z-index: 1;
-  margin: 0;
-  color: #1e1e1e;
-  font-size: 32px;
-  line-height: 40px;
-  letter-spacing: -0.01em;
-}
-
-.case-card-first .case-intro {
-  width: 809px;
-}
-
-.case-accent {
-  position: absolute;
-  left: 469px;
-  width: 469px;
-  z-index: 1;
-  margin: 0;
-  color: #1e1e1e;
-  font-size: 32px;
-  line-height: 40px;
-  letter-spacing: -0.01em;
-}
-
-.case-card-first .case-accent {
-  top: 160px;
-}
-
-.case-card-second .case-accent {
-  top: 248px;
-  width: 420px;
-}
-
-.case-card-third .case-accent {
-  top: 200px;
-  width: 573px;
-  font-family: 'Panama', 'Instrument Serif', serif;
-  font-style: italic;
-}
-
-.case-image-wrap {
-  position: absolute;
-  left: 8px;
-  bottom: 8px;
-  width: 950px;
-  height: 436px;
-  overflow: hidden;
-  border-radius: 72px;
-  z-index: 1;
-}
-
-.case-image-wrap img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.case-image-caption {
-  position: absolute;
-  top: 164px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  margin: 0;
-  color: #ffffff;
-  font-size: 32px;
-  line-height: 40px;
+  width: 1123px;
+  height: 732px;
 }
 
 .page-footer {
   position: absolute;
   right: 92px;
-  bottom: 80px;
-}
-
-@media (max-width: 1512px) {
-  .figma-page {
-    padding-bottom: 24px;
-  }
+  top: 4540px;
 }

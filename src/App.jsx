@@ -25,13 +25,13 @@ function App() {
         </nav>
 
         <div className="portrait portrait-left">
-          <img src={portraitLeft} alt="" />
+          <img src={portraitRight} alt="" />
         </div>
         <div className="portrait portrait-center">
           <img src={portraitCenter} alt="Портрет Коли Лукьянюка" />
         </div>
         <div className="portrait portrait-right">
-          <img src={portraitRight} alt="" />
+          <img src={portraitLeft} alt="" />
         </div>
 
         <section className="image-block intro-block" id="about">

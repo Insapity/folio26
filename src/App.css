@@ -99,12 +99,12 @@
 
 .portrait-left {
   left: 50%;
-  transform: translateX(calc(-50% - 332px));
+  transform: translateX(calc(-50% - 244px));
 }
 
 .portrait-right {
   left: 50%;
-  transform: translateX(calc(-50% + 332px));
+  transform: translateX(calc(-50% + 244px));
 }
 
 .portrait-center {

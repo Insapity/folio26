@@ -202,35 +202,6 @@ function App() {
           <img src={bandImage} alt="" />
         </section>
 
-        <section className="moment-section">
-          <p className="section-title panama-italic">на момент весны 2026</p>
-
-          <div className="moment-grid">
-            <article className="moment-card">
-              <h3>Почти 4 года работаю в Т-Бизнесе</h3>
-              <p>
-                Нахожусь на должности арт-директора — отвечаю за Главный экран и
-                Навигацию.
-                <br />
-                Плюс имею свою дизайн команду и отвечаю за качество работы
-                отдела
-              </p>
-              <div className="moment-card__tags">
-                <span>интерфейс б2б</span>
-                <span>(ех Тинькофф)</span>
-              </div>
-            </article>
-
-            <article className="moment-card">
-              <h3>
-                В любой работе ищу большую степень
-                <br />
-                ответственности, свободу проявлять
-              </h3>
-            </article>
-          </div>
-        </section>
-
         <section className="cases-wrapper" id="cases">
           <h2 className="section-title panama-italic">опыт, компетенции и кейсы</h2>
 

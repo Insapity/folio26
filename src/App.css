@@ -241,7 +241,7 @@
 
 .case-card__cta {
   display: inline-block;
-  margin-top: 46px;
+  margin-top: 96px;
   color: #1e1e1e;
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -293,10 +293,6 @@
 
 .case-card--team .case-card__body {
   margin-top: 16px;
-}
-
-.case-card--01 .case-card__cta {
-  margin-top: 42px;
 }
 
 .case-card--03 .case-card__note {

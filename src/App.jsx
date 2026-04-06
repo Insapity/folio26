@@ -226,7 +226,14 @@ function App() {
                 aria-label={isPlaying ? 'Остановить видео' : 'Запустить видео'}
                 onClick={toggleHeroVideo}
               >
-                {isPlaying ? 'pause' : 'play'}
+                {isPlaying ? (
+                  <span className="hero-video-toggle__pause" aria-hidden="true">
+                    <span />
+                    <span />
+                  </span>
+                ) : (
+                  <span className="hero-video-toggle__play" aria-hidden="true" />
+                )}
               </button>
             </div>
             <p className="hero-caption">кратко про себя</p>

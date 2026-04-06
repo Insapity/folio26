@@ -197,7 +197,7 @@
 .case-card__line,
 .workbook-item__line {
   height: 1px;
-  background: #1e1e1e;
+  background: rgba(30, 30, 30, 0.2);
 }
 
 .case-card__top {

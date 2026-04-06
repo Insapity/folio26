@@ -61,18 +61,13 @@
 
 .side-nav {
   position: fixed;
-  top: 43px;
+  top: 19px;
   right: 32px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 16px;
   min-width: 106px;
-  padding: 14px 20px;
-  background: rgba(231, 231, 231, 0.78);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border-radius: 20px;
   z-index: 20;
 }
 

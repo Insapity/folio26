@@ -47,6 +47,7 @@ const jobs = [
 const caseCards = [
   {
     id: 'cases',
+    className: 'case-card--01',
     number: '01',
     title: 'моя Команда дизайнеров',
     tag: 'управление',
@@ -78,6 +79,7 @@ const caseCards = [
     imageClassName: 'case-card__image case-card__image--rounded',
   },
   {
+    className: 'case-card--02',
     number: '02',
     title: 'главная т-бизнеса 4.0',
     tag: 'продукт',
@@ -112,6 +114,7 @@ const caseCards = [
     nda: ['к сожалению картинки под NDA,', 'но могу показать их очно'],
   },
   {
+    className: 'case-card--03',
     number: '03',
     title: 'личные продуктовые инициативы',
     tag: 'продукт',
@@ -208,7 +211,7 @@ function App() {
           <div className="cases-list">
             {caseCards.map((card, index) => (
               <article
-                className={`case-card ${index === 0 ? 'case-card--team' : ''}`}
+                className={`case-card ${card.className || ''} ${index === 0 ? 'case-card--team' : ''}`}
                 key={card.number}
               >
                 <div className="case-card__line" />

@@ -197,7 +197,7 @@
 .case-card__line,
 .workbook-item__line {
   height: 1px;
-  background: rgba(30, 30, 30, 0.2);
+  background: rgba(30, 30, 30, 0.1);
 }
 
 .case-card__top {
@@ -230,18 +230,18 @@
 }
 
 .case-card__body {
-  margin-top: 57px;
+  margin-top: 16px;
 }
 
 .case-card__note {
-  margin-top: 45px;
+  margin-top: 80px;
   max-width: 458px;
   color: #1e1e1e;
 }
 
 .case-card__cta {
   display: inline-block;
-  margin-top: 32px;
+  margin-top: 46px;
   color: #1e1e1e;
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -292,7 +292,15 @@
 }
 
 .case-card--team .case-card__body {
-  margin-top: 72px;
+  margin-top: 16px;
+}
+
+.case-card--01 .case-card__cta {
+  margin-top: 42px;
+}
+
+.case-card--03 .case-card__note {
+  margin-top: 117px;
 }
 
 .case-card__tail {

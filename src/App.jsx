@@ -182,11 +182,11 @@ function App() {
             <p className="intro-line intro-line--offset">
               Отвечаю за дизайн сложных продуктов с большой ценой ошибки — б2б финтех,
             </p>
-            <p className="intro-line">
+            <p className="intro-line intro-line--full intro-line--tight">
               екомы, ритейл, медиа. Имею солидную экспертность продакта, могу самостоятельно
               драйвить развитие крупных продуктов.
             </p>
-            <p className="intro-line">
+            <p className="intro-line intro-line--full intro-line--mid">
               <span className="panama-italic">Развиваю команду из 5 дизайнеров</span> — отвечаю
               за качество их работы, продумываю индивидуальный план развития и передаю все
               знания. Всецело отвечаю за найм и последующую интеграцию в команду.

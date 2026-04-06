@@ -55,9 +55,8 @@ const caseCards = [
     text: (
       <>
         Считаю главным кейсом <span className="panama-italic">свою команду дизайнеров.</span> Я
-        целиком отвечаю за их процессы и качество работы, за их развитие
-        <br />
-        скиллсета и общее отношение к работе
+        целиком отвечаю за их процессы и качество работы, за их развитие скиллсета и общее
+        отношение к работе
       </>
     ),
     body: (
@@ -126,9 +125,7 @@ const caseCards = [
     ),
     body: (
       <>
-        Так за время работы, лично мной были предложены
-        <br />
-        <span className="panama-italic">
+        Так за время работы, лично мной были предложены <span className="panama-italic">
           гипотезы, которые сейчас
           <br />
           в среднем приносят больше 100млн в год,
@@ -153,7 +150,7 @@ function App() {
         <header className="page-header">
           <div className="identity-block">
             <p className="identity-line">
-              <span className="panama-italic">Коля Лукьянюк.</span> Лид-дизайнер и артдиректор
+              <span className="panama-italic">Коля Лукьянюк.</span> Лид-дизайнер
             </p>
             <p className="identity-meta">Т-Бизнес, ex. Alfa, MAX, AIC, Mission:Luna</p>
             <p className="identity-meta">лен. область, удаленка</p>

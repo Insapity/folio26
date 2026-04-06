@@ -324,7 +324,7 @@
 
 .workbook-section {
   margin-top: 180px;
-  padding: 56px 32px;
+  padding: 24px 32px 56px;
   background: #ffffff;
   border-radius: 72px;
 }
@@ -381,6 +381,7 @@
 .contact-card {
   min-height: 312px;
   padding-right: 245px;
+  padding-left: 32px;
 }
 
 .contact-label {

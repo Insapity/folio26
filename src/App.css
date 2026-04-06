@@ -89,12 +89,41 @@
   align-items: center;
 }
 
+.hero-video-shell {
+  position: relative;
+}
+
 .hero-portrait {
   display: block;
   width: 440px;
   height: 440px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.hero-video {
+  background: #111111;
+  cursor: pointer;
+}
+
+.hero-video-toggle {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  min-width: 78px;
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(231, 231, 231, 0.92);
+  color: #1e1e1e;
+  font-family: 'TT Commons', 'TT Norms Pro', 'Manrope', sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1.26px;
+  font-variant-caps: all-small-caps;
+  font-feature-settings: 'smcp' 1, 'c2sc' 1;
+  text-transform: none;
+  cursor: pointer;
 }
 
 .hero-caption {

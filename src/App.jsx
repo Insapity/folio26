@@ -1,6 +1,8 @@
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
 
 const heroPortrait = `${import.meta.env.BASE_URL}images/figma-hero-portrait.png`
+const heroVideo = `${import.meta.env.BASE_URL}videos/hero-video.mp4`
 const bandImage = `${import.meta.env.BASE_URL}images/figma-band.png`
 const caseTeamImage = `${import.meta.env.BASE_URL}images/figma-case-team.png`
 const caseNdaImage = `${import.meta.env.BASE_URL}images/figma-case-nda.png`
@@ -146,6 +148,43 @@ const caseCards = [
 ]
 
 function App() {
+  const videoRef = useRef(null)
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) {
+      return undefined
+    }
+
+    const handlePause = () => setIsPlaying(false)
+    const handlePlay = () => setIsPlaying(true)
+    const handleEnded = () => setIsPlaying(false)
+
+    video.addEventListener('pause', handlePause)
+    video.addEventListener('play', handlePlay)
+    video.addEventListener('ended', handleEnded)
+
+    return () => {
+      video.removeEventListener('pause', handlePause)
+      video.removeEventListener('play', handlePlay)
+      video.removeEventListener('ended', handleEnded)
+    }
+  }, [])
+
+  const toggleHeroVideo = async () => {
+    const video = videoRef.current
+    if (!video) {
+      return
+    }
+
+    if (video.paused) {
+      await video.play()
+    } else {
+      video.pause()
+    }
+  }
+
   return (
     <main className="figma-page">
       <div className="portfolio-canvas">
@@ -168,7 +207,28 @@ function App() {
 
         <section className="hero-section" id="about">
           <div className="hero-portrait-wrap">
-            <img className="hero-portrait" src={heroPortrait} alt="Портрет Коли Лукьянюка" />
+            <div className="hero-video-shell">
+              <video
+                ref={videoRef}
+                className="hero-portrait hero-video"
+                src={heroVideo}
+                poster={heroPortrait}
+                preload="metadata"
+                playsInline
+                muted
+                disablePictureInPicture
+                controlsList="nodownload noplaybackrate noremoteplayback nofullscreen"
+                onClick={toggleHeroVideo}
+              />
+              <button
+                className="hero-video-toggle"
+                type="button"
+                aria-label={isPlaying ? 'Остановить видео' : 'Запустить видео'}
+                onClick={toggleHeroVideo}
+              >
+                {isPlaying ? 'pause' : 'play'}
+              </button>
+            </div>
             <p className="hero-caption">кратко про себя</p>
           </div>
         </section>

@@ -1,89 +1,315 @@
 import './App.css'
 
-const portraitLeft = `${import.meta.env.BASE_URL}images/portrait-left.png`
-const portraitCenter = `${import.meta.env.BASE_URL}images/portrait-center.png`
-const portraitRight = `${import.meta.env.BASE_URL}images/portrait-right.png`
-const introImage = `${import.meta.env.BASE_URL}images/section-intro.png`
-const originLeftImage = `${import.meta.env.BASE_URL}images/section-origin-left.png`
-const originRightImage = `${import.meta.env.BASE_URL}images/section-origin-right.png`
-const case01Image = `${import.meta.env.BASE_URL}images/case-01.png`
-const case02Image = `${import.meta.env.BASE_URL}images/case-02.png`
-const case03Image = `${import.meta.env.BASE_URL}images/case-03.png`
+const heroPortrait = `${import.meta.env.BASE_URL}images/figma-hero-portrait.png`
+const bandImage = `${import.meta.env.BASE_URL}images/figma-band.png`
+const caseTeamImage = `${import.meta.env.BASE_URL}images/figma-case-team.png`
+const caseNdaImage = `${import.meta.env.BASE_URL}images/figma-case-nda.png`
+const contactPhoto = `${import.meta.env.BASE_URL}images/figma-contact-photo.png`
+
+const jobs = [
+  {
+    period: 'ноябрь 2022 — настоящее время',
+    title: 'Т-Бизнес. Продуктовый лид дизайнер',
+    description: [
+      'Что делал в компании',
+      'Что делал в компании',
+      'Что делал в компании',
+    ],
+  },
+  {
+    period: 'июль 2022 — ноябрь 2022',
+    title: 'Студия MAX. Старший дизайнер',
+    subtitle: '& ментор в Helper',
+    description: [
+      'Активно занимался наставничеством специалистов по совершенно новому продукту — MAX Helper. Составлял планы развития и помогал дизайнерам достигать новых высот. Также в качестве основной работы был дизайнером продукта в Альфа-Банке в команде по развитию клиентского опыта',
+    ],
+  },
+  {
+    period: 'Июнь 2021 — июнь 2022',
+    title: 'Стартап Mission:Luna (RedMadRobot),',
+    subtitle: 'Продуктовый дизайнер',
+    description: [
+      'Создавал финансовый сервис будущего в команде платежей и переводов.',
+      'За время работы удалось протестировать множество гипотез проблем и решений. и сделать много подходов к итоговому дизайну',
+      '',
+      'стартап был готов для запуска на рынок, но из-за санкций его пришлось закрыть',
+    ],
+  },
+  {
+    period: 'Октябрь 2019 — июнь 2021',
+    title: 'Студия AIC. Мидл в юните ритейла',
+    description: [
+      'дизайнил продукты для крупных международных компаний — екомы, банки, гос сайты, туристические агентства и недвижимость. Почти каждый проект включал в себя создание больших дизайн систем, зачастую управление командой и проведение исследований',
+    ],
+  },
+]
+
+const caseCards = [
+  {
+    id: 'cases',
+    number: '01',
+    title: 'моя Команда дизайнеров',
+    tag: 'управление',
+    period: 'апрель 25’ — н.в.',
+    text: (
+      <>
+        Считаю главным кейсом <span className="panama-italic">свою команду дизайнеров.</span> Я
+        целиком отвечаю за их процессы и качество работы, за их развитие скиллсета и общее
+        отношение к работе
+      </>
+    ),
+    body:
+      'Как следствие, качество работы объективно становится лучше без потери скорости, вовлечение и инициативность растет — ребята растут в грейдах и зарплате, бизнес-команды довольны, а работа идет сильно спокойнее.',
+    cta: 'подробнее про развитие команды',
+    link: `${import.meta.env.BASE_URL}cases/01/`,
+    image: caseTeamImage,
+    imageAlt: 'Кейс про развитие команды дизайнеров',
+    imageClassName: 'case-card__image case-card__image--rounded',
+  },
+  {
+    number: '02',
+    title: 'главная т-бизнеса 4.0',
+    tag: 'продукт',
+    period: 'июль 25’ — н.в.',
+    text: (
+      <>
+        Самый масштабный проект банка <span className="panama-italic">— редизайн всего ЛК и
+        Главной 4.0.</span>
+      </>
+    ),
+    body:
+      'Личная инициатива, которая с июня 25го прошла этапы дискавери, форматирования в стратегию всего направления бизнеса и очную защиту перед стейкхолдерами. Весь 2026 я главный ответственный за деливери проекта со стороны дизайна.',
+    note:
+      'подробнее про этапы дискавери, накопленную экспертизу, все процессы и коммуникации с 20+ командами',
+    cta: 'расскажу здесь',
+    link: `${import.meta.env.BASE_URL}cases/02/`,
+    image: caseNdaImage,
+    imageAlt: 'Кейс про главную Т-Бизнеса 4.0',
+    nda: ['к сожалению картинки под NDA,', 'но могу показать их очно'],
+  },
+  {
+    number: '03',
+    title: 'личные продуктовые инициативы',
+    tag: 'продукт',
+    period: 'сентябрь 24’ — н.в.',
+    text: (
+      <>
+        Всегда стараюсь превзойти ожидания <br />
+        как от себя, так и от своей команды
+      </>
+    ),
+    body: (
+      <>
+        Так за время работы, лично мной были предложены <span className="panama-italic">гипотезы,
+        которые сейчас в среднем приносят больше 100млн в год,</span> даже на стадии МЛП версий
+      </>
+    ),
+    note: 'большинство данных раскрыть не могу, зато про самые интересные кейсы без слива данных',
+    cta: 'расскажу здесь',
+    link: `${import.meta.env.BASE_URL}cases/03/`,
+    image: caseNdaImage,
+    imageAlt: 'Кейс про личные продуктовые инициативы',
+    nda: ['к сожалению картинки под NDA'],
+  },
+]
 
 function App() {
   return (
     <main className="figma-page">
       <div className="portfolio-canvas">
-        <h1 className="hero-title">асцендент в дизайне</h1>
-        <p className="hero-subtitle">Коля Лукьянюк • Лид-дизайнер и артдир</p>
-
-        <nav className="side-nav" aria-label="Основная навигация">
-          <a href="#about">про себя</a>
-          <a href="#cases">кейсы</a>
-          <a href="#origin">мой оридж</a>
-          <a href="#contact">связь</a>
-        </nav>
-
-        <div className="portrait portrait-left">
-          <img src={portraitRight} alt="" />
-        </div>
-        <div className="portrait portrait-center">
-          <img src={portraitCenter} alt="Портрет Коли Лукьянюка" />
-        </div>
-        <div className="portrait portrait-right">
-          <img src={portraitLeft} alt="" />
-        </div>
-
-        <section className="image-block intro-block" id="about">
-          <img src={introImage} alt="Вводный блок портфолио" />
-        </section>
-
-        <section className="origin-section" id="origin">
-          <p className="section-panama section-panama-top">
-            на момент вайбкодинга этого резюме я
-          </p>
-          <p className="expectation-note">
-            если мы с вами общаемся, вероятно вы соответствуете этим ожиданиям
-          </p>
-
-          <div className="image-block origin-block origin-block-left">
-            <img src={originLeftImage} alt="Точка А" />
+        <header className="page-header">
+          <div className="identity-block">
+            <p className="identity-line">
+              <span className="panama-italic">Коля Лукьянюк.</span> Лид-дизайнер и артдиректор
+            </p>
+            <p className="identity-meta">Т-Бизнес, ex. Alfa, MAX, AIC, Mission:Luna</p>
+            <p className="identity-meta">лен. область, удаленка</p>
           </div>
 
-          <div className="image-block origin-block origin-block-right">
-            <img src={originRightImage} alt="Точка Б" />
+          <nav className="side-nav" aria-label="Основная навигация">
+            <a href="#about">про себя</a>
+            <a href="#cases">кейсы</a>
+            <a href="#origin">оридж</a>
+            <a href="#contact">связь</a>
+          </nav>
+        </header>
+
+        <section className="hero-section" id="about">
+          <div className="hero-portrait-wrap">
+            <img className="hero-portrait" src={heroPortrait} alt="Портрет Коли Лукьянюка" />
+            <p className="hero-caption">кратко про себя</p>
           </div>
         </section>
 
-        <section className="cases-section" id="cases">
-          <p className="section-panama cases-heading">
-            а теперь про мой опыт, компетенции и кейсы
-          </p>
+        <section className="intro-section">
+          <div className="intro-heading">
+            <span className="panama-italic">Продуктовый дизайнер</span>
+            <span>с общим стажем 8 лет</span>
+          </div>
 
-          <article className="case-image-card case-image-card-first">
-            <a href={`${import.meta.env.BASE_URL}cases/01/`} aria-label="Открыть кейс 01">
-              <img src={case01Image} alt="Кейс 01" />
-            </a>
-          </article>
-
-          <article className="case-image-card case-image-card-second">
-            <a href={`${import.meta.env.BASE_URL}cases/02/`} aria-label="Открыть кейс 02">
-              <img src={case02Image} alt="Кейс 02" />
-            </a>
-          </article>
-
-          <article className="case-image-card case-image-card-third">
-            <a href={`${import.meta.env.BASE_URL}cases/03/`} aria-label="Открыть кейс 03">
-              <img src={case03Image} alt="Кейс 03" />
-            </a>
-          </article>
+          <div className="intro-copy">
+            <p className="intro-line intro-line--offset">
+              Отвечаю за дизайн сложных продуктов с большой ценой ошибки — б2б финтех,
+            </p>
+            <p className="intro-line">
+              екомы, ритейл, медиа. Имею солидную экспертность продакта, могу самостоятельно
+              драйвить развитие крупных продуктов.
+            </p>
+            <p className="intro-line">
+              <span className="panama-italic">Развиваю команду из 5 дизайнеров</span> — отвечаю
+              за качество их работы, продумываю индивидуальный план развития и передаю все
+              знания. Всецело отвечаю за найм и последующую интеграцию в команду.
+            </p>
+            <p className="intro-line intro-line--right">
+              Выстраиваю с нуля <span className="panama-italic">процессы для отдела дизайнеров</span>
+              {' '}— паттерны развития, найм, продуктовый подход и ведение задач
+            </p>
+          </div>
         </section>
 
-        <footer className="page-footer" id="contact">
-          <a href="https://t.me/insapity" target="_blank" rel="noreferrer">
-            связь
-          </a>
-        </footer>
+        <section className="band-section">
+          <img src={bandImage} alt="" />
+        </section>
+
+        <section className="moment-section">
+          <p className="section-title panama-italic">на момент весны 2026</p>
+
+          <div className="moment-grid">
+            <article className="moment-card">
+              <h3>Почти 4 года работаю в Т-Бизнесе</h3>
+              <p>
+                Нахожусь на должности арт-директора — отвечаю за Главный экран и Навигацию.
+                Плюс имею свою дизайн команду и отвечаю за качество работы отдела
+              </p>
+              <div className="moment-card__tags">
+                <span>интерфейс б2б</span>
+                <span>(ех Тинькофф)</span>
+              </div>
+            </article>
+
+            <article className="moment-card">
+              <h3>В любой работе ищу большую степень ответственности, свободу проявлять</h3>
+            </article>
+          </div>
+        </section>
+
+        <section className="cases-wrapper" id="cases">
+          <h2 className="section-title panama-italic">опыт, компетенции и кейсы</h2>
+
+          <div className="cases-list">
+            {caseCards.map((card, index) => (
+              <article
+                className={`case-card ${index === 0 ? 'case-card--team' : ''}`}
+                key={card.number}
+              >
+                <div className="case-card__line" />
+                <div className="case-card__top">
+                  <span>{card.number}</span>
+                  <span>{card.title}</span>
+                  <span>{card.tag}</span>
+                  <span>{card.period}</span>
+                </div>
+
+                <div className="case-card__content">
+                  <div className="case-card__text">
+                    <p className="case-card__lead">{card.text}</p>
+                    <p className="case-card__body">{card.body}</p>
+                    {card.note ? <p className="case-card__note">{card.note}</p> : null}
+                    <a className="case-card__cta" href={card.link}>
+                      {card.cta}
+                    </a>
+                  </div>
+
+                  <a className={card.imageClassName || 'case-card__image'} href={card.link}>
+                    <img src={card.image} alt={card.imageAlt} />
+                    {card.nda ? (
+                      <div className="case-card__nda">
+                        {card.nda.map((line) => (
+                          <p key={line}>{line}</p>
+                        ))}
+                      </div>
+                    ) : null}
+                  </a>
+                </div>
+              </article>
+            ))}
+
+            <div className="case-card__tail">
+              <div className="case-card__line" />
+              <div className="case-card__top case-card__top--muted">
+                <span>∞</span>
+                <span>кейсы будут дополняться. Дополнительно могу рассказать лично на знакомстве</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="workbook-section" id="origin">
+          <h2 className="section-title panama-italic">трудовая книжка</h2>
+
+          <div className="workbook-list">
+            {jobs.map((job) => (
+              <article className="workbook-item" key={`${job.period}-${job.title}`}>
+                <div className="workbook-item__line" />
+                <div className="workbook-item__row">
+                  <p className="workbook-item__period">{job.period}</p>
+                  <div className="workbook-item__content">
+                    <h3 className="workbook-item__title">
+                      {job.title}
+                      {job.subtitle ? (
+                        <>
+                          <br />
+                          {job.subtitle}
+                        </>
+                      ) : null}
+                    </h3>
+                    <div className="workbook-item__description">
+                      {job.description.map((line, index) => (
+                        <p key={`${job.title}-${index}`}>{line || '\u00A0'}</p>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="contact-section" id="contact">
+          <div className="contact-card">
+            <p className="contact-label">контакты и связь</p>
+
+            <div className="contact-meta">
+              <span className="contact-meta__muted">живу</span>
+              <span>в лен. области</span>
+              <span className="contact-meta__muted">работаю</span>
+              <span>на удаленке</span>
+            </div>
+
+            <div className="contact-links">
+              <div className="contact-links__row">
+                <span className="contact-meta__muted">личный телеграм:</span>
+                <a href="https://t.me/insapity" target="_blank" rel="noreferrer">
+                  t.me/insapity
+                </a>
+              </div>
+              <div className="contact-links__row">
+                <span className="contact-meta__muted">канал про дизайн</span>
+                <a href="https://t.me/ascendesign" target="_blank" rel="noreferrer">
+                  t.me/ascendesign
+                </a>
+              </div>
+              <div className="contact-links__row">
+                <span className="contact-meta__muted">электропочта</span>
+                <span>lukyanyuk.98@mail.ru</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="contact-photo">
+            <img src={contactPhoto} alt="Портрет Коли Лукьянюка" />
+          </div>
+        </section>
       </div>
     </main>
   )

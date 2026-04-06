@@ -47,12 +47,14 @@
 .contact-label {
   font-family: 'TT Commons', 'TT Norms Pro', 'Manrope', sans-serif;
   font-size: 14px;
-  line-height: normal;
+  line-height: 17px;
   letter-spacing: 1.26px;
+  text-transform: uppercase;
 }
 
 .identity-meta {
   margin: 7px 0 0;
+  white-space: nowrap;
 }
 
 .side-nav {
@@ -95,6 +97,7 @@
 .hero-caption {
   margin: 16px 0 0;
   color: #1e1e1e;
+  white-space: nowrap;
 }
 
 .intro-section {
@@ -188,8 +191,13 @@
   letter-spacing: -0.32px;
 }
 
+.moment-card h3 {
+  width: 648px;
+}
+
 .moment-card p {
   margin-top: 32px;
+  width: 648px;
 }
 
 .moment-card__tags {
@@ -202,6 +210,7 @@
   font-size: 12px;
   line-height: normal;
   letter-spacing: 0;
+  text-transform: uppercase;
 }
 
 .cases-wrapper {
@@ -243,6 +252,10 @@
   color: #1e1e1e;
 }
 
+.case-card__top span {
+  white-space: nowrap;
+}
+
 .case-card__top span:last-child {
   justify-self: end;
   text-align: right;
@@ -276,6 +289,7 @@
   color: #1e1e1e;
   text-decoration: underline;
   text-underline-offset: 2px;
+  white-space: nowrap;
 }
 
 .case-card__image {
@@ -335,6 +349,11 @@
   opacity: 0.3;
 }
 
+.case-card__top--muted span:last-child {
+  justify-self: start;
+  text-align: left;
+}
+
 .workbook-section {
   margin-top: 180px;
   padding: 56px 32px;
@@ -364,6 +383,7 @@
 .workbook-item__period {
   margin: 0;
   color: #1e1e1e;
+  white-space: nowrap;
 }
 
 .workbook-item__content {
@@ -398,6 +418,7 @@
 .contact-label {
   margin: 0;
   color: #1e1e1e;
+  white-space: nowrap;
 }
 
 .contact-meta {

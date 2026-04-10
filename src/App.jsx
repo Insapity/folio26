@@ -74,8 +74,7 @@ const caseCards = [
         спокойнее.
       </>
     ),
-    cta: 'подробнее про развитие команды',
-    link: `${import.meta.env.BASE_URL}cases/01/`,
+    cta: 'кейс в процессе написания',
     image: caseTeamImage,
     imageAlt: 'Кейс про развитие команды дизайнеров',
     imageClassName: 'case-card__image case-card__image--rounded',
@@ -109,8 +108,7 @@ const caseCards = [
     ),
     note:
       'подробнее про этапы дискавери, накопленную экспертизу, все процессы и коммуникации с 20+ командами',
-    cta: 'расскажу здесь',
-    link: `${import.meta.env.BASE_URL}cases/02/`,
+    cta: 'кейс в процессе написания',
     image: caseNdaImage,
     imageAlt: 'Кейс про главную Т-Бизнеса 4.0',
     nda: ['к сожалению картинки под NDA,', 'но могу показать их очно'],
@@ -139,8 +137,7 @@ const caseCards = [
       </>
     ),
     note: 'большинство данных раскрыть не могу, зато про самые интересные кейсы без слива данных',
-    cta: 'расскажу здесь',
-    link: `${import.meta.env.BASE_URL}cases/03/`,
+    cta: 'кейс в процессе написания',
     image: caseNdaImage,
     imageAlt: 'Кейс про личные продуктовые инициативы',
     nda: ['к сожалению картинки под NDA'],
@@ -291,13 +288,17 @@ function App() {
                   <div className="case-card__text">
                     <p className="case-card__lead">{card.text}</p>
                     <p className="case-card__body">{card.body}</p>
-                    {card.note ? <p className="case-card__note">{card.note}</p> : null}
-                    <a className="case-card__cta" href={card.link}>
-                      {card.cta}
-                    </a>
+                    <div className="case-card__pending">
+                      <span className="case-card__pending-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false">
+                          <path d="M4 16.9V20h3.1L17.8 9.3l-3.1-3.1L4 16.9Zm15.6-9.4c.4-.4.4-1 0-1.4l-1.7-1.7c-.4-.4-1-.4-1.4 0l-1 1 3.1 3.1 1-1Z" />
+                        </svg>
+                      </span>
+                      <span>{card.cta}</span>
+                    </div>
                   </div>
 
-                  <a className={card.imageClassName || 'case-card__image'} href={card.link}>
+                  <div className={card.imageClassName || 'case-card__image'}>
                     <img src={card.image} alt={card.imageAlt} />
                     {card.nda ? (
                       <div className="case-card__nda">
@@ -306,7 +307,7 @@ function App() {
                         ))}
                       </div>
                     ) : null}
-                  </a>
+                  </div>
                 </div>
               </article>
             ))}

@@ -226,6 +226,71 @@
   object-fit: cover;
 }
 
+.moment-section {
+  margin-top: 180px;
+}
+
+.moment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 720px);
+  gap: 8px;
+  margin-top: 64px;
+}
+
+.moment-card {
+  position: relative;
+  min-height: 312px;
+  padding: 40px 48px;
+  background: #ffffff;
+  border-radius: 72px;
+}
+
+.moment-card__eyebrow,
+.moment-card__body,
+.moment-card__copy p {
+  margin: 0;
+  color: #1e1e1e;
+  font-family: 'TT Norms Pro', 'Manrope', sans-serif;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.32px;
+}
+
+.moment-card__eyebrow {
+  width: 648px;
+}
+
+.moment-card__meta {
+  position: absolute;
+  top: 40px;
+  right: 48px;
+  margin: 0;
+  color: #1e1e1e;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: right;
+}
+
+.moment-card__copy {
+  margin-top: 64px;
+}
+
+.moment-card__copy p + p {
+  margin-top: 0;
+}
+
+.moment-card__intro {
+  margin: 0;
+  color: #1e1e1e;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.moment-card__body {
+  width: 644px;
+  margin-top: 32px;
+}
+
 .cases-wrapper {
   margin-top: 180px;
 }

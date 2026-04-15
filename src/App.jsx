@@ -267,6 +267,36 @@ function App() {
           <img src={bandImage} alt="" />
         </section>
 
+        <section className="moment-section">
+          <p className="section-title panama-italic">на момент весны 2026</p>
+
+          <div className="moment-grid">
+            <article className="moment-card moment-card--left">
+              <p className="moment-card__eyebrow">Почти 4 года работаю в Т-Бизнесе</p>
+              <p className="moment-card__meta panama-italic">
+                интерфейс б2б
+                <br />
+                (ех Тинькофф)
+              </p>
+              <div className="moment-card__copy">
+                <p>
+                  <span className="panama-italic">Нахожусь на должности арт-директора</span> —
+                  отвечаю за Главный экран и Навигацию.
+                </p>
+                <p>Плюс имею свою дизайн команду и отвечаю за качество работы отдела</p>
+              </div>
+            </article>
+
+            <article className="moment-card moment-card--right">
+              <p className="moment-card__intro panama-italic">Сейчас в поисках</p>
+              <p className="moment-card__body">
+                И в любой работе ищу большую степень ответственности, свободу проявлять
+                накопленные навыки и вести за собой продукт и людей
+              </p>
+            </article>
+          </div>
+        </section>
+
         <section className="cases-wrapper" id="cases">
           <h2 className="section-title panama-italic">опыт, компетенции и кейсы</h2>
 

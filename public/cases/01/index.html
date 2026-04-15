@@ -185,12 +185,29 @@
 
       .summary__metric-copy {
         margin: 0;
+        width: 22.5rem;
         font-family: 'TT Commons', 'TT Norms Pro', 'Manrope', sans-serif;
         font-size: 0.875rem;
         line-height: 1.0625rem;
         letter-spacing: 0.07875rem;
         font-variant-caps: all-small-caps;
         font-feature-settings: 'smcp' 1, 'c2sc' 1;
+      }
+
+      .summary__metric-photo {
+        width: 22.5rem;
+        margin-top: 1.5rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        transform: rotate(-4.14deg);
+        transform-origin: left top;
+        box-shadow: 0 0.25rem 1rem rgba(30, 30, 30, 0.08);
+      }
+
+      .summary__metric-photo img {
+        display: block;
+        width: 100%;
+        height: auto;
       }
 
       .summary__accent {
@@ -403,6 +420,9 @@
           <div class="summary__metric">
             <p class="summary__metric-value">4.64 <span style="color: #00b60f">— плюс 23% к году</span></p>
             <p class="summary__metric-copy">моя средневзвешенная оценка руководителя по системе т-банка</p>
+            <div class="summary__metric-photo" aria-hidden="true">
+              <img src="/folio26/cases/01/score-card.png" alt="" />
+            </div>
           </div>
         </article>
       </section>

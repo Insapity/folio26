@@ -405,6 +405,10 @@
   filter: blur(4px);
 }
 
+.case-card--01 .case-card__image img {
+  filter: none;
+}
+
 .case-card__image--rounded {
   height: 436px;
   border: none;

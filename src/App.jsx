@@ -3,6 +3,7 @@ import './App.css'
 
 const heroPortrait = `${import.meta.env.BASE_URL}images/figma-hero-portrait.png`
 const heroVideo = `${import.meta.env.BASE_URL}videos/hero-video.mp4`
+const caseTeamImage = `${import.meta.env.BASE_URL}images/figma-case-team.png`
 const caseNdaImage = `${import.meta.env.BASE_URL}images/figma-case-nda.png`
 const contactPhoto = `${import.meta.env.BASE_URL}images/figma-contact-photo.png`
 
@@ -75,7 +76,8 @@ const caseCards = [
       </>
     ),
     cta: 'кейс в процессе написания',
-    image: null,
+    image: caseTeamImage,
+    imageAlt: 'Кейс про развитие команды дизайнеров',
   },
   {
     className: 'case-card--02',

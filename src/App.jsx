@@ -78,6 +78,7 @@ const caseCards = [
     ),
     cta: 'подробнее в кейсе',
     href: firstCaseHref,
+    linkWholeCase: true,
     image: caseTeamImage,
     imageAlt: 'Кейс про развитие команды дизайнеров',
   },
@@ -110,7 +111,8 @@ const caseCards = [
     ),
     note:
       'подробнее про этапы дискавери, накопленную экспертизу, все процессы и коммуникации с 20+ командами',
-    cta: 'кейс в процессе написания',
+    cta: 'кейс под нда',
+    showCtaIcon: false,
     image: caseNdaImage,
     imageAlt: 'Кейс про главную Т-Бизнеса 4.0',
     nda: ['к сожалению картинки под NDA,', 'но могу показать их очно'],
@@ -139,7 +141,8 @@ const caseCards = [
       </>
     ),
     note: 'большинство данных раскрыть не могу, зато про самые интересные кейсы без слива данных',
-    cta: 'кейс в процессе написания',
+    cta: 'кейс под нда',
+    showCtaIcon: false,
     image: caseNdaImage,
     imageAlt: 'Кейс про личные продуктовые инициативы',
     nda: ['к сожалению картинки под NDA'],
@@ -312,59 +315,104 @@ function App() {
                 key={card.number}
               >
                 <div className="case-card__line" />
-                <div className="case-card__top">
-                  <span>{card.number}</span>
-                  <span>{card.title}</span>
-                  <span>{card.tag}</span>
-                  <span>{card.period}</span>
-                </div>
-
-                <div className={`case-card__content ${!card.image ? 'case-card__content--text-only' : ''}`}>
-                  <div className="case-card__text">
-                    <p className="case-card__lead">{card.text}</p>
-                    <p className="case-card__body">{card.body}</p>
-                    <div className="case-card__pending">
-                      <span className="case-card__pending-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" focusable="false">
-                          <path d="M4 16.9V20h3.1L17.8 9.3l-3.1-3.1L4 16.9Zm15.6-9.4c.4-.4.4-1 0-1.4l-1.7-1.7c-.4-.4-1-.4-1.4 0l-1 1 3.1 3.1 1-1Z" />
-                        </svg>
-                      </span>
-                      {card.href ? (
-                        <a className="case-card__pending-link" href={card.href}>
-                          {card.cta}
-                        </a>
-                      ) : (
-                        <span>{card.cta}</span>
-                      )}
+                {card.href && card.linkWholeCase ? (
+                  <a className="case-card__link" href={card.href}>
+                    <div className="case-card__top">
+                      <span>{card.number}</span>
+                      <span>{card.title}</span>
+                      <span>{card.tag}</span>
+                      <span>{card.period}</span>
                     </div>
-                  </div>
 
-                  {card.image ? (
-                    card.href ? (
-                      <a className={card.imageClassName || 'case-card__image'} href={card.href}>
-                        <img src={card.image} alt={card.imageAlt} />
-                        {card.nda ? (
-                          <div className="case-card__nda">
-                            {card.nda.map((line) => (
-                              <p key={line}>{line}</p>
-                            ))}
-                          </div>
-                        ) : null}
-                      </a>
-                    ) : (
-                      <div className={card.imageClassName || 'case-card__image'}>
-                        <img src={card.image} alt={card.imageAlt} />
-                        {card.nda ? (
-                          <div className="case-card__nda">
-                            {card.nda.map((line) => (
-                              <p key={line}>{line}</p>
-                            ))}
-                          </div>
-                        ) : null}
+                    <div className={`case-card__content ${!card.image ? 'case-card__content--text-only' : ''}`}>
+                      <div className="case-card__text">
+                        <p className="case-card__lead">{card.text}</p>
+                        <p className="case-card__body">{card.body}</p>
+                        <div className="case-card__pending">
+                          {card.showCtaIcon !== false ? (
+                            <span className="case-card__pending-icon" aria-hidden="true">
+                              <svg viewBox="0 0 24 24" focusable="false">
+                                <path d="M4 16.9V20h3.1L17.8 9.3l-3.1-3.1L4 16.9Zm15.6-9.4c.4-.4.4-1 0-1.4l-1.7-1.7c-.4-.4-1-.4-1.4 0l-1 1 3.1 3.1 1-1Z" />
+                              </svg>
+                            </span>
+                          ) : null}
+                          <span>{card.cta}</span>
+                        </div>
                       </div>
-                    )
-                  ) : null}
-                </div>
+
+                      {card.image ? (
+                        <div className={card.imageClassName || 'case-card__image'}>
+                          <img src={card.image} alt={card.imageAlt} />
+                          {card.nda ? (
+                            <div className="case-card__nda">
+                              {card.nda.map((line) => (
+                                <p key={line}>{line}</p>
+                              ))}
+                            </div>
+                          ) : null}
+                        </div>
+                      ) : null}
+                    </div>
+                  </a>
+                ) : (
+                  <>
+                    <div className="case-card__top">
+                      <span>{card.number}</span>
+                      <span>{card.title}</span>
+                      <span>{card.tag}</span>
+                      <span>{card.period}</span>
+                    </div>
+
+                    <div className={`case-card__content ${!card.image ? 'case-card__content--text-only' : ''}`}>
+                      <div className="case-card__text">
+                        <p className="case-card__lead">{card.text}</p>
+                        <p className="case-card__body">{card.body}</p>
+                        <div className="case-card__pending">
+                          {card.showCtaIcon !== false ? (
+                            <span className="case-card__pending-icon" aria-hidden="true">
+                              <svg viewBox="0 0 24 24" focusable="false">
+                                <path d="M4 16.9V20h3.1L17.8 9.3l-3.1-3.1L4 16.9Zm15.6-9.4c.4-.4.4-1 0-1.4l-1.7-1.7c-.4-.4-1-.4-1.4 0l-1 1 3.1 3.1 1-1Z" />
+                              </svg>
+                            </span>
+                          ) : null}
+                          {card.href ? (
+                            <a className="case-card__pending-link" href={card.href}>
+                              {card.cta}
+                            </a>
+                          ) : (
+                            <span>{card.cta}</span>
+                          )}
+                        </div>
+                      </div>
+
+                      {card.image ? (
+                        card.href ? (
+                          <a className={card.imageClassName || 'case-card__image'} href={card.href}>
+                            <img src={card.image} alt={card.imageAlt} />
+                            {card.nda ? (
+                              <div className="case-card__nda">
+                                {card.nda.map((line) => (
+                                  <p key={line}>{line}</p>
+                                ))}
+                              </div>
+                            ) : null}
+                          </a>
+                        ) : (
+                          <div className={card.imageClassName || 'case-card__image'}>
+                            <img src={card.image} alt={card.imageAlt} />
+                            {card.nda ? (
+                              <div className="case-card__nda">
+                                {card.nda.map((line) => (
+                                  <p key={line}>{line}</p>
+                                ))}
+                              </div>
+                            ) : null}
+                          </div>
+                        )
+                      ) : null}
+                    </div>
+                  </>
+                )}
               </article>
             ))}
 

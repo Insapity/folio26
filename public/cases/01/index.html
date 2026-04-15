@@ -35,7 +35,7 @@
       }
 
       html {
-        font-size: min(16px, calc((100vw - 4rem) / 94.5));
+        font-size: min(16px, calc((100vw - 2rem) / 94.5));
         scroll-behavior: smooth;
       }
 
@@ -53,7 +53,7 @@
       .case-page {
         width: 94.5rem;
         margin: 0 auto;
-        padding: 2rem;
+        padding: 1.6875rem 1rem 2rem;
       }
 
       .tablet-gate {
@@ -69,11 +69,13 @@
         position: absolute;
         left: 0;
         top: 0;
+        z-index: 30;
         display: inline-flex;
         align-items: center;
         gap: 0.625rem;
         color: rgba(30, 30, 30, 0.3);
         text-decoration: none;
+        cursor: pointer;
         font-size: 2rem;
         line-height: 2.5rem;
         letter-spacing: -0.02rem;
@@ -182,6 +184,7 @@
 
       .summary__metric-copy {
         margin: 0;
+        font-family: 'TT Commons', 'TT Norms Pro', 'Manrope', sans-serif;
         font-size: 0.875rem;
         line-height: 1.0625rem;
         letter-spacing: 0.07875rem;

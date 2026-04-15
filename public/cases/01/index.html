@@ -135,6 +135,7 @@
       .summary {
         position: relative;
         margin-top: 3.875rem;
+        padding-bottom: 15rem;
       }
 
       .summary__grid {
@@ -151,12 +152,14 @@
       }
 
       .summary__card--wide {
+        position: relative;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
         min-height: 10.125rem;
         margin-top: 0.5rem;
         align-items: start;
+        overflow: visible;
       }
 
       .summary__eyebrow,
@@ -194,17 +197,19 @@
         font-feature-settings: 'smcp' 1, 'c2sc' 1;
       }
 
-      .summary__metric-photo {
-        width: 22.5rem;
-        margin-top: 1.5rem;
-        border-radius: 1rem;
+      .summary__floating-photo {
+        position: absolute;
+        left: 4rem;
+        bottom: -12rem;
+        width: 69rem;
+        border-radius: 2rem;
         overflow: hidden;
         transform: rotate(-4.14deg);
         transform-origin: left top;
-        box-shadow: 0 0.25rem 1rem rgba(30, 30, 30, 0.08);
+        box-shadow: 0 0.5rem 1.5rem rgba(30, 30, 30, 0.14);
       }
 
-      .summary__metric-photo img {
+      .summary__floating-photo img {
         display: block;
         width: 100%;
         height: auto;
@@ -420,11 +425,12 @@
           <div class="summary__metric">
             <p class="summary__metric-value">4.64 <span style="color: #00b60f">— плюс 23% к году</span></p>
             <p class="summary__metric-copy">моя средневзвешенная оценка руководителя по системе т-банка</p>
-            <div class="summary__metric-photo" aria-hidden="true">
-              <img src="/folio26/cases/01/score-card.png" alt="" />
-            </div>
           </div>
         </article>
+
+        <div class="summary__floating-photo" aria-hidden="true">
+          <img src="/folio26/cases/01/score-card.png" alt="" />
+        </div>
       </section>
 
       <section class="content-wrap">

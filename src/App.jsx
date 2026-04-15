@@ -3,7 +3,6 @@ import './App.css'
 
 const heroPortrait = `${import.meta.env.BASE_URL}images/figma-hero-portrait.png`
 const heroVideo = `${import.meta.env.BASE_URL}videos/hero-video.mp4`
-const bandImage = `${import.meta.env.BASE_URL}images/figma-band.png`
 const caseTeamImage = `${import.meta.env.BASE_URL}images/figma-case-team.png`
 const caseNdaImage = `${import.meta.env.BASE_URL}images/figma-case-nda.png`
 const contactPhoto = `${import.meta.env.BASE_URL}images/figma-contact-photo.png`
@@ -261,10 +260,6 @@ function App() {
               {' '}— паттерны развития, найм, продуктовый подход и ведение задач
             </p>
           </div>
-        </section>
-
-        <section className="band-section">
-          <img src={bandImage} alt="" />
         </section>
 
         <section className="moment-section">

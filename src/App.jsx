@@ -3,7 +3,6 @@ import './App.css'
 
 const heroPortrait = `${import.meta.env.BASE_URL}images/figma-hero-portrait.png`
 const heroVideo = `${import.meta.env.BASE_URL}videos/hero-video.mp4`
-const caseTeamImage = `${import.meta.env.BASE_URL}images/figma-case-team.png`
 const caseNdaImage = `${import.meta.env.BASE_URL}images/figma-case-nda.png`
 const contactPhoto = `${import.meta.env.BASE_URL}images/figma-contact-photo.png`
 
@@ -76,9 +75,7 @@ const caseCards = [
       </>
     ),
     cta: 'кейс в процессе написания',
-    image: caseTeamImage,
-    imageAlt: 'Кейс про развитие команды дизайнеров',
-    imageClassName: 'case-card__image case-card__image--rounded',
+    image: null,
   },
   {
     className: 'case-card--02',
@@ -311,7 +308,7 @@ function App() {
                   <span>{card.period}</span>
                 </div>
 
-                <div className="case-card__content">
+                <div className={`case-card__content ${!card.image ? 'case-card__content--text-only' : ''}`}>
                   <div className="case-card__text">
                     <p className="case-card__lead">{card.text}</p>
                     <p className="case-card__body">{card.body}</p>
@@ -325,16 +322,18 @@ function App() {
                     </div>
                   </div>
 
-                  <div className={card.imageClassName || 'case-card__image'}>
-                    <img src={card.image} alt={card.imageAlt} />
-                    {card.nda ? (
-                      <div className="case-card__nda">
-                        {card.nda.map((line) => (
-                          <p key={line}>{line}</p>
-                        ))}
-                      </div>
-                    ) : null}
-                  </div>
+                  {card.image ? (
+                    <div className={card.imageClassName || 'case-card__image'}>
+                      <img src={card.image} alt={card.imageAlt} />
+                      {card.nda ? (
+                        <div className="case-card__nda">
+                          {card.nda.map((line) => (
+                            <p key={line}>{line}</p>
+                          ))}
+                        </div>
+                      ) : null}
+                    </div>
+                  ) : null}
                 </div>
               </article>
             ))}

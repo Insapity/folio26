@@ -346,6 +346,10 @@
   margin-top: 41px;
 }
 
+.case-card__content--text-only {
+  grid-template-columns: 720px;
+}
+
 .case-card__text {
   padding-left: 48px;
   width: 672px;

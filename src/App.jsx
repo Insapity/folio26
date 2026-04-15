@@ -185,12 +185,10 @@ function App() {
   return (
     <main className="figma-page">
       <div className="tablet-gate" aria-hidden="true">
-        <p className="tablet-gate__eyebrow panama-italic">desktop only</p>
-        <p className="tablet-gate__title">Этот сайт пока открывается только с десктопа.</p>
-        <p className="tablet-gate__copy">
-          На планшете и меньше я показываю заглушку, чтобы не ломать макет. Лучше открыть
-          портфолио с ноутбука или большого экрана.
+        <p className="tablet-gate__title">
+          это резюме для удобства чтения можно открыть только с десктопа
         </p>
+        <p className="tablet-gate__copy">спасибо! надеюсь на понимание 🫶</p>
       </div>
 
       <div className="portfolio-canvas">

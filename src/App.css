@@ -6,7 +6,6 @@
 .portfolio-canvas {
   position: relative;
   width: 94.5rem;
-  max-width: calc(100vw - 4rem);
   margin: 0 auto;
   padding: 1.6875rem 2rem 0;
 }

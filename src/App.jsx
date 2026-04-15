@@ -6,6 +6,7 @@ const heroVideo = `${import.meta.env.BASE_URL}videos/hero-video.mp4`
 const caseTeamImage = `${import.meta.env.BASE_URL}images/figma-case-team.png`
 const caseNdaImage = `${import.meta.env.BASE_URL}images/figma-case-nda.png`
 const contactPhoto = `${import.meta.env.BASE_URL}images/figma-contact-photo.png`
+const firstCaseHref = `${import.meta.env.BASE_URL}cases/01/`
 
 const jobs = [
   {
@@ -75,7 +76,8 @@ const caseCards = [
         спокойнее.
       </>
     ),
-    cta: 'кейс в процессе написания',
+    cta: 'подробнее в кейсе',
+    href: firstCaseHref,
     image: caseTeamImage,
     imageAlt: 'Кейс про развитие команды дизайнеров',
   },
@@ -327,21 +329,40 @@ function App() {
                           <path d="M4 16.9V20h3.1L17.8 9.3l-3.1-3.1L4 16.9Zm15.6-9.4c.4-.4.4-1 0-1.4l-1.7-1.7c-.4-.4-1-.4-1.4 0l-1 1 3.1 3.1 1-1Z" />
                         </svg>
                       </span>
-                      <span>{card.cta}</span>
+                      {card.href ? (
+                        <a className="case-card__pending-link" href={card.href}>
+                          {card.cta}
+                        </a>
+                      ) : (
+                        <span>{card.cta}</span>
+                      )}
                     </div>
                   </div>
 
                   {card.image ? (
-                    <div className={card.imageClassName || 'case-card__image'}>
-                      <img src={card.image} alt={card.imageAlt} />
-                      {card.nda ? (
-                        <div className="case-card__nda">
-                          {card.nda.map((line) => (
-                            <p key={line}>{line}</p>
-                          ))}
-                        </div>
-                      ) : null}
-                    </div>
+                    card.href ? (
+                      <a className={card.imageClassName || 'case-card__image'} href={card.href}>
+                        <img src={card.image} alt={card.imageAlt} />
+                        {card.nda ? (
+                          <div className="case-card__nda">
+                            {card.nda.map((line) => (
+                              <p key={line}>{line}</p>
+                            ))}
+                          </div>
+                        ) : null}
+                      </a>
+                    ) : (
+                      <div className={card.imageClassName || 'case-card__image'}>
+                        <img src={card.image} alt={card.imageAlt} />
+                        {card.nda ? (
+                          <div className="case-card__nda">
+                            {card.nda.map((line) => (
+                              <p key={line}>{line}</p>
+                            ))}
+                          </div>
+                        ) : null}
+                      </div>
+                    )
                   ) : null}
                 </div>
               </article>

@@ -391,6 +391,12 @@
   fill: currentColor;
 }
 
+.case-card__pending-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
 .case-card__image {
   position: relative;
   display: block;
@@ -399,6 +405,10 @@
   border: 0.125rem solid #535353;
   border-radius: 0.5rem;
   overflow: hidden;
+}
+
+.case-card__image[href] {
+  cursor: pointer;
 }
 
 .case-card__image img {

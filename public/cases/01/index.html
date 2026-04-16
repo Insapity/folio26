@@ -220,6 +220,32 @@
         font-style: italic;
       }
 
+      .process-two-visual {
+        position: absolute;
+        right: max(1rem, calc((100vw - 94.5rem) / 2 + 1rem));
+        background: transparent;
+      }
+
+      .process-two-visual img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .process-two-visual--a {
+        top: 109rem;
+        width: 28.65rem;
+        transform: rotate(15deg);
+        transform-origin: right top;
+      }
+
+      .process-two-visual--b {
+        top: 145rem;
+        width: 29.15rem;
+        transform: rotate(-6.18deg);
+        transform-origin: right top;
+      }
+
       .content-wrap {
         display: grid;
         grid-template-columns: 72rem 1fr;
@@ -553,6 +579,14 @@
           </div>
         </aside>
       </section>
+
+      <div class="process-two-visual process-two-visual--a" aria-hidden="true">
+        <img src="/folio26/cases/01/team-shot-02.png" alt="" />
+      </div>
+
+      <div class="process-two-visual process-two-visual--b" aria-hidden="true">
+        <img src="/folio26/cases/01/team-shot-01.png" alt="" />
+      </div>
     </main>
   </body>
 </html>

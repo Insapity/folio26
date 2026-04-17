@@ -77,6 +77,7 @@ const caseCards = [
     cta: 'подробнее в кейсе',
     href: firstCaseHref,
     linkWholeCase: true,
+    showCtaIcon: false,
     image: caseTeamImage,
     imageAlt: 'Кейс про развитие команды дизайнеров',
   },
@@ -95,9 +96,14 @@ const caseCards = [
     ),
     body: (
       <>
-        Весь 2026 проект находится на стадии дискавери
+        Личная инициатива, которая с июня 25го прошла этапы дискавери,
         <br />
-        под моим руководством
+        форматирования в стратегию всего направления бизнеса и очную защиту
+        <br />
+        перед стейкхолдерами.
+        <br />
+        <br />
+        Весь 2026 проект находится на стадии дискавери под моим руководством
       </>
     ),
     note:
@@ -261,7 +267,7 @@ function App() {
                               </svg>
                             </span>
                           ) : null}
-                          <span>{card.cta}</span>
+                          <span className={card.href ? 'case-card__pending-link' : undefined}>{card.cta}</span>
                         </div>
                       </div>
 

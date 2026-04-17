@@ -1,8 +1,6 @@
-import { useEffect, useRef, useState } from 'react'
 import './App.css'
 
 const heroPortrait = `${import.meta.env.BASE_URL}images/figma-hero-portrait.png`
-const heroVideo = `${import.meta.env.BASE_URL}videos/hero-video.mp4`
 const caseTeamImage = `${import.meta.env.BASE_URL}images/figma-case-team.png`
 const caseNdaImage = `${import.meta.env.BASE_URL}images/figma-case-nda.png`
 const contactPhoto = `${import.meta.env.BASE_URL}images/figma-contact-photo.png`
@@ -90,23 +88,16 @@ const caseCards = [
     period: 'июль 25’ — н.в.',
     text: (
       <>
-        Самый масштабный проект банка
+        Стратегия дизайна Т-Бизнеса на 3 года.
         <br />
-        <span className="panama-italic">— редизайн всего ЛК и Главной 4.0.</span>
+        <span className="panama-italic">И ее первый шаг — редизайн всего ЛК и Главной 4.0.</span>
       </>
     ),
     body: (
       <>
-        Личная инициатива, которая с июня 25го прошла этапы дискавери,
+        Весь 2026 проект находится на стадии дискавери
         <br />
-        форматирования в стратегию всего направления бизнеса и очную защиту
-        <br />
-        перед стейкхолдерами.
-        <br />
-        <br />
-        Весь 2026 я главный ответственный
-        <br />
-        за деливери проекта со стороны дизайна
+        под моим руководством
       </>
     ),
     note:
@@ -150,43 +141,6 @@ const caseCards = [
 ]
 
 function App() {
-  const videoRef = useRef(null)
-  const [isPlaying, setIsPlaying] = useState(false)
-
-  useEffect(() => {
-    const video = videoRef.current
-    if (!video) {
-      return undefined
-    }
-
-    const handlePause = () => setIsPlaying(false)
-    const handlePlay = () => setIsPlaying(true)
-    const handleEnded = () => setIsPlaying(false)
-
-    video.addEventListener('pause', handlePause)
-    video.addEventListener('play', handlePlay)
-    video.addEventListener('ended', handleEnded)
-
-    return () => {
-      video.removeEventListener('pause', handlePause)
-      video.removeEventListener('play', handlePlay)
-      video.removeEventListener('ended', handleEnded)
-    }
-  }, [])
-
-  const toggleHeroVideo = async () => {
-    const video = videoRef.current
-    if (!video) {
-      return
-    }
-
-    if (video.paused) {
-      await video.play()
-    } else {
-      video.pause()
-    }
-  }
-
   return (
     <main className="figma-page">
       <div className="tablet-gate" aria-hidden="true">
@@ -216,36 +170,7 @@ function App() {
 
         <section className="hero-section" id="about">
           <div className="hero-portrait-wrap">
-            <div className="hero-video-shell">
-              <video
-                ref={videoRef}
-                className="hero-portrait hero-video"
-                src={heroVideo}
-                poster={heroPortrait}
-                preload="metadata"
-                playsInline
-                muted
-                disablePictureInPicture
-                controlsList="nodownload noplaybackrate noremoteplayback nofullscreen"
-                onClick={toggleHeroVideo}
-              />
-              <button
-                className="hero-video-toggle"
-                type="button"
-                aria-label={isPlaying ? 'Остановить видео' : 'Запустить видео'}
-                onClick={toggleHeroVideo}
-              >
-                {isPlaying ? (
-                  <span className="hero-video-toggle__pause" aria-hidden="true">
-                    <span />
-                    <span />
-                  </span>
-                ) : (
-                  <span className="hero-video-toggle__play" aria-hidden="true" />
-                )}
-              </button>
-            </div>
-            <p className="hero-caption">кратко про себя</p>
+            <img className="hero-portrait" src={heroPortrait} alt="Портрет Коли Лукьянюка" />
           </div>
         </section>
 

@@ -508,6 +508,11 @@
   gap: 0.5rem;
 }
 
+.contact-links__row--nowrap {
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
 .contact-links__row a {
   color: #1e1e1e;
   text-decoration: none;

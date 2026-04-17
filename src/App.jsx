@@ -65,9 +65,8 @@ const caseCards = [
     ),
     body: (
       <>
-        Как следствие, качество работы объективно становится лучше без потери
-        <br />
-        скорости, вовлечение и инициативность растет — ребята растут в
+        Как следствие, качество работы объективно становится лучше без потери скорости,
+        вовлечение и инициативность растет — ребята растут в&nbsp;
         <br />
         грейдах и зарплате, бизнес-команды довольны, а работа идет сильно
         <br />
@@ -406,7 +405,7 @@ function App() {
                   t.me/insapity
                 </a>
               </div>
-              <div className="contact-links__row">
+              <div className="contact-links__row contact-links__row--nowrap">
                 <span className="contact-meta__muted">канал про дизайн</span>
                 <a href="https://t.me/ascendesign" target="_blank" rel="noreferrer">
                   t.me/ascendesign
